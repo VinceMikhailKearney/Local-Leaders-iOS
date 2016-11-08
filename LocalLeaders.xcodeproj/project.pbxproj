@@ -16,6 +16,7 @@
 		D838CD111DD20CF1002AE07B /* LocalLeadersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D838CD101DD20CF1002AE07B /* LocalLeadersTests.swift */; };
 		D838CD1C1DD20CF1002AE07B /* LocalLeadersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D838CD1B1DD20CF1002AE07B /* LocalLeadersUITests.swift */; };
 		D838CD2B1DD20F27002AE07B /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D838CD2A1DD20F27002AE07B /* SwiftyJSON.framework */; };
+		D838CD2E1DD211BC002AE07B /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D838CD2D1DD211BC002AE07B /* Alamofire.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		D838CD1B1DD20CF1002AE07B /* LocalLeadersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalLeadersUITests.swift; sourceTree = "<group>"; };
 		D838CD1D1DD20CF1002AE07B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D838CD2A1DD20F27002AE07B /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		D838CD2D1DD211BC002AE07B /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D838CD2B1DD20F27002AE07B /* SwiftyJSON.framework in Frameworks */,
+				D838CD2E1DD211BC002AE07B /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,6 +138,7 @@
 		D838CD291DD20F27002AE07B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D838CD2D1DD211BC002AE07B /* Alamofire.framework */,
 				D838CD2A1DD20F27002AE07B /* SwiftyJSON.framework */,
 			);
 			name = Frameworks;
@@ -281,6 +285,7 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 			);
 			outputPaths = (
 			);
