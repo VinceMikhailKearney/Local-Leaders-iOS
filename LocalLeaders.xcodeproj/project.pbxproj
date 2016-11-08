@@ -15,6 +15,7 @@
 		D838CD061DD20CF1002AE07B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D838CD041DD20CF1002AE07B /* LaunchScreen.storyboard */; };
 		D838CD111DD20CF1002AE07B /* LocalLeadersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D838CD101DD20CF1002AE07B /* LocalLeadersTests.swift */; };
 		D838CD1C1DD20CF1002AE07B /* LocalLeadersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D838CD1B1DD20CF1002AE07B /* LocalLeadersUITests.swift */; };
+		D838CD2B1DD20F27002AE07B /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D838CD2A1DD20F27002AE07B /* SwiftyJSON.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		D838CD171DD20CF1002AE07B /* LocalLeadersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LocalLeadersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D838CD1B1DD20CF1002AE07B /* LocalLeadersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalLeadersUITests.swift; sourceTree = "<group>"; };
 		D838CD1D1DD20CF1002AE07B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D838CD2A1DD20F27002AE07B /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D838CD2B1DD20F27002AE07B /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +86,7 @@
 				D838CD0F1DD20CF1002AE07B /* LocalLeadersTests */,
 				D838CD1A1DD20CF1002AE07B /* LocalLeadersUITests */,
 				D838CCF71DD20CF1002AE07B /* Products */,
+				D838CD291DD20F27002AE07B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -126,6 +130,14 @@
 				D838CD1D1DD20CF1002AE07B /* Info.plist */,
 			);
 			path = LocalLeadersUITests;
+			sourceTree = "<group>";
+		};
+		D838CD291DD20F27002AE07B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D838CD2A1DD20F27002AE07B /* SwiftyJSON.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -418,6 +430,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 73S8PFBWGP;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = LocalLeaders/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mav.LocalLeaders;
@@ -431,6 +447,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 73S8PFBWGP;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = LocalLeaders/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mav.LocalLeaders;
