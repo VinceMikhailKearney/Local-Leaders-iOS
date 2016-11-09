@@ -358,10 +358,9 @@
 			children = (
 				D84689441DD212E4004C7600 /* Assets */,
 				D8D010191DD398AE003432B6 /* RealmDatabase */,
-				D838CCF91DD20CF1002AE07B /* AppDelegate.swift */,
 				D8AE2E871DD3C557006C2C47 /* ViewControllers */,
-				D838CCFF1DD20CF1002AE07B /* Main.storyboard */,
-				D838CD041DD20CF1002AE07B /* LaunchScreen.storyboard */,
+				D8AE2E8A1DD3C64C006C2C47 /* Storyboard */,
+				D838CCF91DD20CF1002AE07B /* AppDelegate.swift */,
 				D838CD071DD20CF1002AE07B /* Info.plist */,
 			);
 			path = LocalLeaders;
@@ -528,6 +527,15 @@
 				D838CCFD1DD20CF1002AE07B /* SocialViewController.swift */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D8AE2E8A1DD3C64C006C2C47 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				D838CCFF1DD20CF1002AE07B /* Main.storyboard */,
+				D838CD041DD20CF1002AE07B /* LaunchScreen.storyboard */,
+			);
+			name = Storyboard;
 			sourceTree = "<group>";
 		};
 		D8D010191DD398AE003432B6 /* RealmDatabase */ = {
