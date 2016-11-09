@@ -9,7 +9,7 @@
 import Foundation
 import Alamofire
 
-let GET_MLAS_JSON = "https://localleaders.herokuapp.com/leaders/mlas/"
+let GET_MLAS_JSON = "https://localleaders.herokuapp.com/leaders/mlas"
 
 open class LocalLeadersAPI : NSObject
 {
