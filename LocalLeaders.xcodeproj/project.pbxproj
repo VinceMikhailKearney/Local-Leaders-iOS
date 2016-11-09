@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		D838CCFA1DD20CF1002AE07B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D838CCF91DD20CF1002AE07B /* AppDelegate.swift */; };
-		D838CCFC1DD20CF1002AE07B /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D838CCFB1DD20CF1002AE07B /* FirstViewController.swift */; };
-		D838CCFE1DD20CF1002AE07B /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D838CCFD1DD20CF1002AE07B /* SecondViewController.swift */; };
+		D838CCFC1DD20CF1002AE07B /* LeadersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D838CCFB1DD20CF1002AE07B /* LeadersViewController.swift */; };
+		D838CCFE1DD20CF1002AE07B /* SocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D838CCFD1DD20CF1002AE07B /* SocialViewController.swift */; };
 		D838CD011DD20CF1002AE07B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D838CCFF1DD20CF1002AE07B /* Main.storyboard */; };
 		D838CD061DD20CF1002AE07B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D838CD041DD20CF1002AE07B /* LaunchScreen.storyboard */; };
 		D838CD111DD20CF1002AE07B /* LocalLeadersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D838CD101DD20CF1002AE07B /* LocalLeadersTests.swift */; };
@@ -125,6 +125,7 @@
 		D8468A1E1DD2133A004C7600 /* mla_with_id__8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D84689B21DD21339004C7600 /* mla_with_id__8.jpg */; };
 		D8468A1F1DD2133A004C7600 /* mla_with_id__80.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D84689B31DD21339004C7600 /* mla_with_id__80.jpg */; };
 		D8468A201DD2133A004C7600 /* mla_with_id__90.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D84689B41DD21339004C7600 /* mla_with_id__90.jpg */; };
+		D8AE2E891DD3C57C006C2C47 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AE2E881DD3C57C006C2C47 /* BaseViewController.swift */; };
 		D8D0100D1DD397C2003432B6 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8D0100B1DD397C2003432B6 /* Realm.framework */; };
 		D8D0100E1DD397C2003432B6 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8D0100C1DD397C2003432B6 /* RealmSwift.framework */; };
 		D8D010111DD397DE003432B6 /* Realm.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D8D0100B1DD397C2003432B6 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -172,8 +173,8 @@
 /* Begin PBXFileReference section */
 		D838CCF61DD20CF1002AE07B /* LocalLeaders.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocalLeaders.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D838CCF91DD20CF1002AE07B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D838CCFB1DD20CF1002AE07B /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		D838CCFD1DD20CF1002AE07B /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		D838CCFB1DD20CF1002AE07B /* LeadersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeadersViewController.swift; sourceTree = "<group>"; };
+		D838CCFD1DD20CF1002AE07B /* SocialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialViewController.swift; sourceTree = "<group>"; };
 		D838CD001DD20CF1002AE07B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D838CD051DD20CF1002AE07B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D838CD071DD20CF1002AE07B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -294,6 +295,7 @@
 		D84689B21DD21339004C7600 /* mla_with_id__8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mla_with_id__8.jpg; sourceTree = "<group>"; };
 		D84689B31DD21339004C7600 /* mla_with_id__80.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mla_with_id__80.jpg; sourceTree = "<group>"; };
 		D84689B41DD21339004C7600 /* mla_with_id__90.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mla_with_id__90.jpg; sourceTree = "<group>"; };
+		D8AE2E881DD3C57C006C2C47 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		D8D0100B1DD397C2003432B6 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		D8D0100C1DD397C2003432B6 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		D8D010151DD3984F003432B6 /* BaseRealmObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRealmObject.swift; sourceTree = "<group>"; };
@@ -357,8 +359,7 @@
 				D84689441DD212E4004C7600 /* Assets */,
 				D8D010191DD398AE003432B6 /* RealmDatabase */,
 				D838CCF91DD20CF1002AE07B /* AppDelegate.swift */,
-				D838CCFB1DD20CF1002AE07B /* FirstViewController.swift */,
-				D838CCFD1DD20CF1002AE07B /* SecondViewController.swift */,
+				D8AE2E871DD3C557006C2C47 /* ViewControllers */,
 				D838CCFF1DD20CF1002AE07B /* Main.storyboard */,
 				D838CD041DD20CF1002AE07B /* LaunchScreen.storyboard */,
 				D838CD071DD20CF1002AE07B /* Info.plist */,
@@ -517,6 +518,16 @@
 				D84689B41DD21339004C7600 /* mla_with_id__90.jpg */,
 			);
 			path = MLAs;
+			sourceTree = "<group>";
+		};
+		D8AE2E871DD3C557006C2C47 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D8AE2E881DD3C57C006C2C47 /* BaseViewController.swift */,
+				D838CCFB1DD20CF1002AE07B /* LeadersViewController.swift */,
+				D838CCFD1DD20CF1002AE07B /* SocialViewController.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 		D8D010191DD398AE003432B6 /* RealmDatabase */ = {
@@ -811,10 +822,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8D010181DD398A9003432B6 /* LeaderRecord.swift in Sources */,
-				D838CCFE1DD20CF1002AE07B /* SecondViewController.swift in Sources */,
+				D838CCFE1DD20CF1002AE07B /* SocialViewController.swift in Sources */,
 				D838CCFA1DD20CF1002AE07B /* AppDelegate.swift in Sources */,
 				D8D0101B1DD3993C003432B6 /* PartyRecord.swift in Sources */,
-				D838CCFC1DD20CF1002AE07B /* FirstViewController.swift in Sources */,
+				D838CCFC1DD20CF1002AE07B /* LeadersViewController.swift in Sources */,
+				D8AE2E891DD3C57C006C2C47 /* BaseViewController.swift in Sources */,
 				D8D010161DD3984F003432B6 /* BaseRealmObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
