@@ -10,7 +10,10 @@ import Foundation
 import RealmSwift
 
 enum baseRealmError : Error
-{ case realmTypeMustBeOverridden }
+{
+    case realmTypeMustBeOverridden
+    case moreThanOneInDatabaseMatchingKey
+}
 
 open class BaseRealmObject : Object
 {
@@ -43,7 +46,7 @@ open class BaseRealmObject : Object
     }
     
     // MARK: Use a base Realm
-    class func baseRealm() -> Realm
+    static func baseRealm() -> Realm
     {
         return try! Realm()
     }
@@ -76,9 +79,19 @@ open class BaseRealmObject : Object
         }
     }
     
-    // MARK: Helper methods
+    static func fetchWithKey(_ key : String) throws -> Object {
+        var results : Results<Object>?
+        results = baseRealm().objects(try! realmType()).filter("key == %@", key)
+        
+        if(results!.count == 1) {
+            return results!.first!
+        } else {
+            throw baseRealmError.moreThanOneInDatabaseMatchingKey
+        }
+    }
+    
     static func allObjects() -> Array<Object>
     {
-        return Array(try! Realm().objects(try! realmType()))
+        return Array(baseRealm().objects(try! realmType()))
     }
 }

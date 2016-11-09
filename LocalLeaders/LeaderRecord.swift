@@ -42,7 +42,7 @@ open class LeaderRecord : BaseRealmObject
             newLeader.partyAbbreviation = dictionary["partyAbbreviation"]
             newLeader.partyName = dictionary["partyName"]
             newLeader.title = dictionary["title"]
-            newLeader.twitterHandle = dictionary["twitterHandle"]
+            newLeader.twitterHandle = ""
             newLeader.emailAddress = dictionary["emailAddress"]
             newLeader.constituency = dictionary["constituency"]
             return newLeader
@@ -51,11 +51,14 @@ open class LeaderRecord : BaseRealmObject
         return fetchedLeader!
     }
     
-    // MARK: Helper methods
     func updateTwitterHandle(_ handle : String)
     {
         try! BaseRealmObject.baseRealm().write({
             self.twitterHandle = handle
         })
+    }
+    
+    static func fetchLeadersInConstituency(_ constituency : String) -> Array<LeaderRecord> {
+        return Array(baseRealm().objects(try! realmType()).filter("constituency == %@", constituency)) as! Array<LeaderRecord>
     }
 }
