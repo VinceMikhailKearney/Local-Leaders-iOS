@@ -1,14 +1,14 @@
 //
-//  FirstViewController.swift
+//  BaseViewController.swift
 //  LocalLeaders
 //
-//  Created by Vince Kearney on 08/11/2016.
+//  Created by Vince Kearney on 09/11/2016.
 //  Copyright © 2016 MAV. All rights reserved.
 //
 
 import UIKit
 
-class FirstViewController: UIViewController
+class BaseViewController: UIViewController
 {
     override func viewDidLoad()
     {

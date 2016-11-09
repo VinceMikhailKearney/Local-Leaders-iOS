@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  FirstViewController.swift
 //  LocalLeaders
 //
 //  Created by Vince Kearney on 08/11/2016.
@@ -8,11 +8,10 @@
 
 import UIKit
 
-class SecondViewController: UIViewController
+class LeadersViewController: BaseViewController
 {
     override func viewDidLoad()
     {
         super.viewDidLoad()
     }
 }
-
