@@ -14,7 +14,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        // First thing we need to do if to check for any database migrations that might need performed.
+        BaseRealmObject.checkForRealmMigration()
+        
+        // Request the MLA JSON from the server.
+        LocalLeadersAPI.getMlasJSON()
         return true
     }
 

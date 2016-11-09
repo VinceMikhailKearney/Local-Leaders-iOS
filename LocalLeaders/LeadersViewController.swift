@@ -13,6 +13,5 @@ class LeadersViewController: BaseViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        LocalLeadersAPI.getMlasJSON()
     }
 }
