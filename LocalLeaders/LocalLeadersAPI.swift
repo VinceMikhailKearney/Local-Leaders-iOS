@@ -16,7 +16,7 @@ open class LocalLeadersAPI : NSObject
     static func getMlasJSON()
     {
         LocalLeadersAPI.get(GET_MLAS_JSON) { (result : Any?) in
-            print(result!)
+//            print(result!)
         }
     }
     

@@ -13,8 +13,8 @@ class LeadersViewController: BaseViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        CSVScanner.runFunctionOnRowsFromFile(fileName: "elected-candidates", withFunction: { (aRow:Dictionary<String, String>) in
-            print(aRow)
-        })
+        
+        print(ParserUtils.fetchTwitterHandleFor(first: "Andy", last: "Allen")!)
+        print(ParserUtils.fetchEmailFor(first: "Naomi", last: "Long")!)
     }
 }
