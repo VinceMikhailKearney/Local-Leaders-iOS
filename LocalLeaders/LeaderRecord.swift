@@ -31,15 +31,15 @@ open class LeaderRecord : BaseRealmObject
     // MARK: Creating objects
     static func create(dictionary : Dictionary<String, AnyObject>) -> LeaderRecord!
     {
-        let key : String = "\(dictionary["MemberPersonId"] as? Int))"
-        let fetchedLeader : LeaderRecord? = BaseRealmObject.baseRealm().objects(LeaderRecord.self).filter("key = %@",key).first
+        let key : String = String((dictionary["MemberPersonId"] as! Int))
+        let fetchedLeader : LeaderRecord? = BaseRealmObject.baseRealm().objects(LeaderRecord.self).filter("key == %@",key).first
         if (fetchedLeader == nil)
         {
             let newLeader = LeaderRecord()
             newLeader.key = key
             newLeader.firstname = dictionary["MemberFirstName"] as? String
             newLeader.lastName = dictionary["MemberLastName"] as? String
-            newLeader.imageURL = dictionary["MemberImgURL"] as? String
+            newLeader.imageURL = dictionary["MemberImgUrl"] as? String
             newLeader.partyAbbreviation = dictionary["PartyAbbreviation"] as? String
             newLeader.partyName = dictionary["PartyName"] as? String
             newLeader.title = dictionary["MemberTitle"] as? String

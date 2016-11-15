@@ -126,6 +126,7 @@
 		D8468A1F1DD2133A004C7600 /* mla_with_id__80.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D84689B31DD21339004C7600 /* mla_with_id__80.jpg */; };
 		D8468A201DD2133A004C7600 /* mla_with_id__90.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D84689B41DD21339004C7600 /* mla_with_id__90.jpg */; };
 		D8520FE81DD3FCE60083B056 /* ParserUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8520FE71DD3FCE60083B056 /* ParserUtils.swift */; };
+		D8934BBC1DDB744800A0534E /* LeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8934BBB1DDB744800A0534E /* LeaderCell.swift */; };
 		D8AE2E891DD3C57C006C2C47 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AE2E881DD3C57C006C2C47 /* BaseViewController.swift */; };
 		D8AE2E8C1DD3C691006C2C47 /* LocalLeadersAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AE2E8B1DD3C691006C2C47 /* LocalLeadersAPI.swift */; };
 		D8C437091DD3D94D00114A7A /* elected-candidates.csv in Resources */ = {isa = PBXBuildFile; fileRef = D8C437081DD3D94D00114A7A /* elected-candidates.csv */; };
@@ -299,6 +300,7 @@
 		D84689B31DD21339004C7600 /* mla_with_id__80.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mla_with_id__80.jpg; sourceTree = "<group>"; };
 		D84689B41DD21339004C7600 /* mla_with_id__90.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mla_with_id__90.jpg; sourceTree = "<group>"; };
 		D8520FE71DD3FCE60083B056 /* ParserUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParserUtils.swift; sourceTree = "<group>"; };
+		D8934BBB1DDB744800A0534E /* LeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderCell.swift; sourceTree = "<group>"; };
 		D8AE2E881DD3C57C006C2C47 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		D8AE2E8B1DD3C691006C2C47 /* LocalLeadersAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalLeadersAPI.swift; sourceTree = "<group>"; };
 		D8C437081DD3D94D00114A7A /* elected-candidates.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "elected-candidates.csv"; path = "../../../../../Muskaqueers/Local Leaders/Datasets/2016_archive_datapackage/NI/elected-candidates.csv"; sourceTree = "<group>"; };
@@ -534,6 +536,7 @@
 				D8AE2E881DD3C57C006C2C47 /* BaseViewController.swift */,
 				D838CCFB1DD20CF1002AE07B /* LeadersViewController.swift */,
 				D838CCFD1DD20CF1002AE07B /* SocialViewController.swift */,
+				D8934BBB1DDB744800A0534E /* LeaderCell.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -850,6 +853,7 @@
 				D8D010181DD398A9003432B6 /* LeaderRecord.swift in Sources */,
 				D838CCFE1DD20CF1002AE07B /* SocialViewController.swift in Sources */,
 				D838CCFA1DD20CF1002AE07B /* AppDelegate.swift in Sources */,
+				D8934BBC1DDB744800A0534E /* LeaderCell.swift in Sources */,
 				D8D0101B1DD3993C003432B6 /* PartyRecord.swift in Sources */,
 				D838CCFC1DD20CF1002AE07B /* LeadersViewController.swift in Sources */,
 				D8AE2E8C1DD3C691006C2C47 /* LocalLeadersAPI.swift in Sources */,
