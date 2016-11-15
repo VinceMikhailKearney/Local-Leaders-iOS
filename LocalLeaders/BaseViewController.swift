@@ -13,5 +13,10 @@ class BaseViewController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
+        self.navigationController?.navigationBar.barTintColor = UIColor.orange
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        
+        self.tabBarController?.tabBar.barTintColor = UIColor.orange
     }
 }

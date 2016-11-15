@@ -29,16 +29,16 @@ class LeadersViewController: BaseViewController, UITableViewDelegate, UITableVie
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.backgroundColor = UIColor.white
-        self.navigationController?.title = "MLAs"
+        self.navigationItem.title = "MLAs"
     }
     
     // MARK: TableView Delegate Methods
-    func tableView(_ tableView:UITableView, numberOfRowsInSection section:Int) -> Int
+    internal func tableView(_ tableView:UITableView, numberOfRowsInSection section:Int) -> Int
     {
         return leaders!.count
     }
     
-    func tableView(_ tableView:UITableView, cellForRowAt indexPath:IndexPath) -> UITableViewCell
+    internal func tableView(_ tableView:UITableView, cellForRowAt indexPath:IndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: "LeaderCell", for: indexPath) as! LeaderCell
         
@@ -47,23 +47,17 @@ class LeadersViewController: BaseViewController, UITableViewDelegate, UITableVie
         cell.leaderPartyName.text = leader.partyName!
         cell.leaderConstituency.text = leader.constituency!
         let leaderKey : String = leader.key!
-        print("")
-        print(leader)
-        print(leader.partyName!)
-        print(leaderKey)
-        print("mla_with_id__\(leaderKey)")
-        print("")
         cell.leaderImage.image = getImageFromFile("mla_with_id__\(leaderKey)")
         
         return cell
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
+    internal func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
     {
         return 100.0
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    internal func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
         let leader : LeaderRecord = leaders![indexPath.row]
         print("Just tapped MLA: \(leader.firstname!) \(leader.lastName!). Key -> \(leader.key!)")
@@ -73,13 +67,8 @@ class LeadersViewController: BaseViewController, UITableViewDelegate, UITableVie
     {
         var image : UIImage?
         if let filePath = Bundle.main.path(forResource: path, ofType: "jpg") {
-//            do {
-                image = UIImage(contentsOfFile: filePath)
-//            } catch {
-//                print("Unable to load csv file from path: \(filePath)")
-//            }
+            image = UIImage(contentsOfFile: filePath)
         }
-        
         return image
     }
 }
