@@ -29,22 +29,24 @@ open class LeaderRecord : BaseRealmObject
     }
     
     // MARK: Creating objects
-    static func fetchOrCreate(dictionary : Dictionary<String, String> , key : String) -> LeaderRecord
+    static func create(dictionary : Dictionary<String, AnyObject>) -> LeaderRecord!
     {
+        let key : String = "\(dictionary["MemberPersonId"] as? Int))"
         let fetchedLeader : LeaderRecord? = BaseRealmObject.baseRealm().objects(LeaderRecord.self).filter("key = %@",key).first
         if (fetchedLeader == nil)
         {
             let newLeader = LeaderRecord()
-            newLeader.key = dictionary["key"]
-            newLeader.firstname = dictionary["firstName"]
-            newLeader.lastName = dictionary["lastName"]
-            newLeader.imageURL = dictionary["imageURL"]
-            newLeader.partyAbbreviation = dictionary["partyAbbreviation"]
-            newLeader.partyName = dictionary["partyName"]
-            newLeader.title = dictionary["title"]
+            newLeader.key = key
+            newLeader.firstname = dictionary["MemberFirstName"] as? String
+            newLeader.lastName = dictionary["MemberLastName"] as? String
+            newLeader.imageURL = dictionary["MemberImgURL"] as? String
+            newLeader.partyAbbreviation = dictionary["PartyAbbreviation"] as? String
+            newLeader.partyName = dictionary["PartyName"] as? String
+            newLeader.title = dictionary["MemberTitle"] as? String
             newLeader.twitterHandle = ""
-            newLeader.emailAddress = dictionary["emailAddress"]
-            newLeader.constituency = dictionary["constituency"]
+            newLeader.emailAddress = ""
+            newLeader.constituency = dictionary["ConstituencyName"] as? String
+            
             return newLeader
         }
         
@@ -55,6 +57,13 @@ open class LeaderRecord : BaseRealmObject
     {
         try! BaseRealmObject.baseRealm().write({
             self.twitterHandle = handle
+        })
+    }
+    
+    func updateEmailAddress(_ email : String)
+    {
+        try! BaseRealmObject.baseRealm().write({
+            self.emailAddress = email
         })
     }
     

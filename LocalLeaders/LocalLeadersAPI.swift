@@ -15,12 +15,12 @@ open class LocalLeadersAPI : NSObject
 {
     static func getMlasJSON()
     {
-        LocalLeadersAPI.get(GET_MLAS_JSON) { (result : Any?) in
-//            print(result!)
+        LocalLeadersAPI.get(GET_MLAS_JSON) { (result : Dictionary<String, AnyObject>?) in
+            ParserUtils.getMlasFromArray(result!["response"] as! Array<AnyObject>)
         }
     }
     
-    static func get(_ url: String, completion: @escaping (_ result : Any?) -> Void)
+    static func get(_ url: String, completion: @escaping (_ result : Dictionary<String, AnyObject>?) -> Void)
     {
         Alamofire.request(url).validate().responseJSON { response in
             switch response.result
@@ -28,7 +28,7 @@ open class LocalLeadersAPI : NSObject
                 case .success:
                     print("Successful GET request")
                     if let JSON = response.result.value {
-                        completion(JSON)
+                        completion(JSON as? Dictionary<String, AnyObject>)
                     }
                     break
                 

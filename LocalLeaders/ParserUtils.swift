@@ -14,6 +14,20 @@ open class ParserUtils : NSObject
     static let TWITTER_ROW_DATA : Int = 13
     static let EMAIL_ROW_DATA : Int = 7
     
+    static func getMlasFromArray(_ array : Array<AnyObject>)
+    {
+        for object in array {
+            if let leaderDictionary = object as? Dictionary<String, AnyObject> {
+                let newLeader = LeaderRecord.create(dictionary: leaderDictionary)
+                newLeader?.updateTwitterHandle(fetchTwitterHandleFor(first: newLeader!.firstname!, last: newLeader!.lastName!))
+                newLeader?.updateEmailAddress(fetchEmailFor(first: newLeader!.firstname!, last: newLeader!.lastName!))
+                newLeader?.save()
+            }
+        }
+        
+        print(LeaderRecord.allObjects().count)
+    }
+    
     static func fetchTwitterHandleFor(first: String, last: String) -> String! {
         return fetchDataFor(data: TWITTER_ROW_DATA, first: first, last: last)
     }
