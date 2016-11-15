@@ -29,6 +29,7 @@ class LeadersViewController: BaseViewController, UITableViewDelegate, UITableVie
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.backgroundColor = UIColor.white
+        self.navigationController?.title = "MLAs"
     }
     
     // MARK: TableView Delegate Methods
@@ -45,7 +46,6 @@ class LeadersViewController: BaseViewController, UITableViewDelegate, UITableVie
         cell.leaderFullName.text = "\(leader.firstname!) \(leader.lastName!)"
         cell.leaderPartyName.text = leader.partyName!
         cell.leaderConstituency.text = leader.constituency!
-        cell.leaderImage.contentMode = UIViewContentMode.scaleAspectFit
         let leaderKey : String = leader.key!
         print("")
         print(leader)

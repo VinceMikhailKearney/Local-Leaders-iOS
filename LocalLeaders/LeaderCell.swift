@@ -21,8 +21,12 @@ class LeaderCell : UITableViewCell
         
         self.backgroundColor = UIColor.clear
         self.leaderFullName.textColor = UIColor.black
-        self.leaderPartyName.textColor = UIColor.black
-        self.leaderConstituency.textColor = UIColor.black
+        self.leaderPartyName.textColor = UIColor.red
+        self.leaderConstituency.textColor = UIColor.gray
+        
+        self.leaderImage.layer.cornerRadius = 40
+        self.leaderImage.layer.masksToBounds = true
+        self.leaderImage.contentMode = UIViewContentMode.scaleAspectFill
     }
     
     ////////////////////////////////////END OF CLASS////////////////////////////////////
