@@ -22,6 +22,7 @@ open class ThemeManager : NSObject
     static let PINK : String = "PINK"
     static let PRIMARY : String = "PRIMARY"
     static let MAIN_TEXT_COLOR : String = "MAIN_TEXT_COLOR"
+    static let TITLE_COLOR : String = "TITLE_COLOR"
     
     static func initialise() throws
     {

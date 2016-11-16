@@ -10,5 +10,7 @@
 	<string>0x0895AE</string>
 	<key>MAIN_TEXT_COLOR</key>
 	<string>0x000000</string>
+	<key>TITLE_COLOR</key>
+	<string>0xFFFFFF</string>
 </dict>
 </plist>
