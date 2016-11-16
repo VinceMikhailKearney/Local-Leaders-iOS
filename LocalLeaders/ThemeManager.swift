@@ -18,6 +18,10 @@ open class ThemeManager : NSObject
 {
     // MARK: Properties
     static var themeColors : Dictionary<String, String>?
+    static let BLUE : String = "BLUE"
+    static let PINK : String = "PINK"
+    static let PRIMARY : String = "PRIMARY"
+    static let MAIN_TEXT_COLOR : String = "MAIN_TEXT_COLOR"
     
     static func initialise() throws
     {

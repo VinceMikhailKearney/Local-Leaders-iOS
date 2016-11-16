@@ -21,7 +21,7 @@ class LeaderCell : UITableViewCell
         
         self.backgroundColor = UIColor.clear
         self.leaderFullName.textColor = UIColor.black
-        self.leaderPartyName.textColor = UIColor.red
+        self.leaderPartyName.textColor = ThemeManager.getColor(ThemeManager.PINK)
         self.leaderConstituency.textColor = UIColor.gray
         
         self.leaderImage.layer.cornerRadius = 40
