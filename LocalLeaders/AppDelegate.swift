@@ -29,6 +29,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate
             print("Some other error was thrown")
         }
         
+        UIView.appearance(whenContainedInInstancesOf: [UITabBar.self]).tintColor = UIColor.init(white: 1.0, alpha: 0.3)
+        UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.init(white: 1.0, alpha: 1.0)], for: .selected)
+        UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.init(white: 1.0, alpha: 0.3)], for: .normal)
+        
         return true
     }
 

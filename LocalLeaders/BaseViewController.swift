@@ -18,5 +18,6 @@ class BaseViewController: UIViewController
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: ThemeManager.getColor(ThemeManager.TITLE_COLOR)!]
         
         self.tabBarController?.tabBar.barTintColor = ThemeManager.getColor(ThemeManager.PRIMARY)
+        self.tabBarController?.tabBar.tintColor = ThemeManager.getColor(ThemeManager.TITLE_COLOR)
     }
 }
