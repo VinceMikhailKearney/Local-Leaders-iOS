@@ -21,7 +21,6 @@ class LeadersViewController: BaseViewController, UITableViewDelegate, UITableVie
         super.viewDidLoad()
         
         leaders = Array<LeaderRecord>()
-        
         for object in LeaderRecord.allObjects() {
             leaders?.append(object as! LeaderRecord)
         }
