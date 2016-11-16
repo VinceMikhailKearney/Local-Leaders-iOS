@@ -60,6 +60,7 @@ class LeadersViewController: BaseViewController, UITableViewDelegate, UITableVie
     {
         let leader : LeaderRecord = leaders![indexPath.row]
         print("Just tapped MLA: \(leader.firstname!) \(leader.lastName!). Key -> \(leader.key!)")
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     fileprivate func getImageFromFile(_ path: String) -> UIImage?
