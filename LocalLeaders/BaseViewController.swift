@@ -14,9 +14,9 @@ class BaseViewController: UIViewController
     {
         super.viewDidLoad()
         
-        self.navigationController?.navigationBar.barTintColor = UIColor.orange
+        self.navigationController?.navigationBar.barTintColor = ThemeManager.getColor("blue")
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
         
-        self.tabBarController?.tabBar.barTintColor = UIColor.orange
+        self.tabBarController?.tabBar.barTintColor = ThemeManager.getColor("blue")
     }
 }

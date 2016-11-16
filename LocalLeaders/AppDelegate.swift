@@ -19,6 +19,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate
         
         // Request the MLA JSON from the server.
         LocalLeadersAPI.getMlasJSON()
+        
+        // Let's set up the ThemeManager
+        do {
+            try ThemeManager.initialise()
+        } catch themeError.themeFileNotFound {
+            print("Seem's we did not find the ThemeManager plist")
+        } catch {
+            print("Some other error was thrown")
+        }
+        
         return true
     }
 

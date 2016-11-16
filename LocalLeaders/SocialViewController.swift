@@ -14,5 +14,12 @@ class SocialViewController: BaseViewController
     {
         super.viewDidLoad()
     }
+    
+    override func viewWillAppear(_ animated: Bool)
+    {
+        super.viewWillAppear(animated)
+        
+        let blue = ThemeManager.getColor("blue")
+        print(blue ?? "No color")
+    }
 }
-

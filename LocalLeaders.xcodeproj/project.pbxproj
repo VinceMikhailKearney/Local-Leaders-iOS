@@ -16,6 +16,9 @@
 		D838CD1C1DD20CF1002AE07B /* LocalLeadersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D838CD1B1DD20CF1002AE07B /* LocalLeadersUITests.swift */; };
 		D838CD2B1DD20F27002AE07B /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D838CD2A1DD20F27002AE07B /* SwiftyJSON.framework */; };
 		D838CD2E1DD211BC002AE07B /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D838CD2D1DD211BC002AE07B /* Alamofire.framework */; };
+		D84260C21DDCDECF00ACB2E3 /* Colours.plist in Resources */ = {isa = PBXBuildFile; fileRef = D84260C11DDCDECF00ACB2E3 /* Colours.plist */; };
+		D84260C41DDCDF2D00ACB2E3 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84260C31DDCDF2D00ACB2E3 /* ThemeManager.swift */; };
+		D84260C61DDCE6D700ACB2E3 /* UIColorUitls.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84260C51DDCE6D700ACB2E3 /* UIColorUitls.swift */; };
 		D84689471DD212E4004C7600 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D84689451DD212E4004C7600 /* Assets.xcassets */; };
 		D84689B51DD21339004C7600 /* mla_with_id__104.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D84689491DD21339004C7600 /* mla_with_id__104.jpg */; };
 		D84689B61DD21339004C7600 /* mla_with_id__105.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D846894A1DD21339004C7600 /* mla_with_id__105.jpg */; };
@@ -190,6 +193,9 @@
 		D838CD1D1DD20CF1002AE07B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D838CD2A1DD20F27002AE07B /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		D838CD2D1DD211BC002AE07B /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		D84260C11DDCDECF00ACB2E3 /* Colours.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Colours.plist; sourceTree = "<group>"; };
+		D84260C31DDCDF2D00ACB2E3 /* ThemeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
+		D84260C51DDCE6D700ACB2E3 /* UIColorUitls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorUitls.swift; sourceTree = "<group>"; };
 		D84689451DD212E4004C7600 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D84689491DD21339004C7600 /* mla_with_id__104.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mla_with_id__104.jpg; sourceTree = "<group>"; };
 		D846894A1DD21339004C7600 /* mla_with_id__105.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mla_with_id__105.jpg; sourceTree = "<group>"; };
@@ -371,6 +377,8 @@
 				D838CCF91DD20CF1002AE07B /* AppDelegate.swift */,
 				D8AE2E8B1DD3C691006C2C47 /* LocalLeadersAPI.swift */,
 				D8520FE71DD3FCE60083B056 /* ParserUtils.swift */,
+				D84260C31DDCDF2D00ACB2E3 /* ThemeManager.swift */,
+				D84260C51DDCE6D700ACB2E3 /* UIColorUitls.swift */,
 				D838CD071DD20CF1002AE07B /* Info.plist */,
 			);
 			path = LocalLeaders;
@@ -411,6 +419,7 @@
 				D8C437071DD3D93500114A7A /* Files */,
 				D84689481DD21339004C7600 /* MLAs */,
 				D84689451DD212E4004C7600 /* Assets.xcassets */,
+				D84260C11DDCDECF00ACB2E3 /* Colours.plist */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -721,6 +730,7 @@
 				D84689F11DD21339004C7600 /* mla_with_id__3328.jpg in Resources */,
 				D84689FF1DD21339004C7600 /* mla_with_id__5595.jpg in Resources */,
 				D84689F91DD21339004C7600 /* mla_with_id__5223.jpg in Resources */,
+				D84260C21DDCDECF00ACB2E3 /* Colours.plist in Resources */,
 				D8468A1A1DD2133A004C7600 /* mla_with_id__67.jpg in Resources */,
 				D84689BA1DD21339004C7600 /* mla_with_id__133.jpg in Resources */,
 				D84689B61DD21339004C7600 /* mla_with_id__105.jpg in Resources */,
@@ -860,6 +870,8 @@
 				D8AE2E891DD3C57C006C2C47 /* BaseViewController.swift in Sources */,
 				D8D010161DD3984F003432B6 /* BaseRealmObject.swift in Sources */,
 				D8520FE81DD3FCE60083B056 /* ParserUtils.swift in Sources */,
+				D84260C41DDCDF2D00ACB2E3 /* ThemeManager.swift in Sources */,
+				D84260C61DDCE6D700ACB2E3 /* UIColorUitls.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
