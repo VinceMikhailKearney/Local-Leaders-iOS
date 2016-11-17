@@ -31,21 +31,24 @@ open class LeaderRecord : BaseRealmObject
     // MARK: Creating objects
     static func create(dictionary : Dictionary<String, AnyObject>) -> LeaderRecord!
     {
-        let key : String = String((dictionary["MemberPersonId"] as! Int))
+        let key : String = String((dictionary["key"] as! Int))
         let fetchedLeader : LeaderRecord? = BaseRealmObject.baseRealm().objects(LeaderRecord.self).filter("key == %@",key).first
         if (fetchedLeader == nil)
         {
             let newLeader = LeaderRecord()
             newLeader.key = key
-            newLeader.firstname = dictionary["MemberFirstName"] as? String
-            newLeader.lastName = dictionary["MemberLastName"] as? String
-            newLeader.imageURL = dictionary["MemberImgUrl"] as? String
-            newLeader.partyAbbreviation = dictionary["PartyAbbreviation"] as? String
-            newLeader.partyName = dictionary["PartyName"] as? String
-            newLeader.title = dictionary["MemberTitle"] as? String
+            newLeader.firstname = dictionary["firstName"] as? String
+            newLeader.lastName = dictionary["lastName"] as? String
+            newLeader.imageURL = dictionary["imageURL"] as? String
+            newLeader.partyAbbreviation = dictionary["party"] as? String
+            newLeader.partyName = dictionary["partyName"] as? String
+            newLeader.title = dictionary["title"] as? String
+            /////////////////////////////////////////////////////////
+            // The two below are currently not available through the JSON response. CSV parsing still required.
             newLeader.twitterHandle = ""
             newLeader.emailAddress = ""
-            newLeader.constituency = dictionary["ConstituencyName"] as? String
+            /////////////////////////////////////////////////////////
+            newLeader.constituency = dictionary["constituency"] as? String
             
             return newLeader
         }
