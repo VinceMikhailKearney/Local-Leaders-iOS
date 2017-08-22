@@ -130,10 +130,10 @@
 		D8468A1F1DD2133A004C7600 /* mla_with_id__80.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D84689B31DD21339004C7600 /* mla_with_id__80.jpg */; };
 		D8468A201DD2133A004C7600 /* mla_with_id__90.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D84689B41DD21339004C7600 /* mla_with_id__90.jpg */; };
 		D8520FE81DD3FCE60083B056 /* ParserUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8520FE71DD3FCE60083B056 /* ParserUtils.swift */; };
+		D8600B141F4CF8D900678746 /* elected-candidates.csv in Resources */ = {isa = PBXBuildFile; fileRef = D8600B131F4CF8D900678746 /* elected-candidates.csv */; };
 		D8934BBC1DDB744800A0534E /* LeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8934BBB1DDB744800A0534E /* LeaderCell.swift */; };
 		D8AE2E891DD3C57C006C2C47 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AE2E881DD3C57C006C2C47 /* BaseViewController.swift */; };
 		D8AE2E8C1DD3C691006C2C47 /* LocalLeadersAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AE2E8B1DD3C691006C2C47 /* LocalLeadersAPI.swift */; };
-		D8C437091DD3D94D00114A7A /* elected-candidates.csv in Resources */ = {isa = PBXBuildFile; fileRef = D8C437081DD3D94D00114A7A /* elected-candidates.csv */; };
 		D8D0100D1DD397C2003432B6 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8D0100B1DD397C2003432B6 /* Realm.framework */; };
 		D8D0100E1DD397C2003432B6 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8D0100C1DD397C2003432B6 /* RealmSwift.framework */; };
 		D8D010111DD397DE003432B6 /* Realm.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D8D0100B1DD397C2003432B6 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -308,10 +308,10 @@
 		D84689B31DD21339004C7600 /* mla_with_id__80.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mla_with_id__80.jpg; sourceTree = "<group>"; };
 		D84689B41DD21339004C7600 /* mla_with_id__90.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mla_with_id__90.jpg; sourceTree = "<group>"; };
 		D8520FE71DD3FCE60083B056 /* ParserUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParserUtils.swift; sourceTree = "<group>"; };
+		D8600B131F4CF8D900678746 /* elected-candidates.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "elected-candidates.csv"; path = "Files/elected-candidates.csv"; sourceTree = "<group>"; };
 		D8934BBB1DDB744800A0534E /* LeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderCell.swift; sourceTree = "<group>"; };
 		D8AE2E881DD3C57C006C2C47 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		D8AE2E8B1DD3C691006C2C47 /* LocalLeadersAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalLeadersAPI.swift; sourceTree = "<group>"; };
-		D8C437081DD3D94D00114A7A /* elected-candidates.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "elected-candidates.csv"; path = "../../../../../Muskaqueers/Local Leaders/Datasets/2016_archive_datapackage/NI/elected-candidates.csv"; sourceTree = "<group>"; };
 		D8D0100B1DD397C2003432B6 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		D8D0100C1DD397C2003432B6 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		D8D010151DD3984F003432B6 /* BaseRealmObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRealmObject.swift; sourceTree = "<group>"; };
@@ -565,7 +565,7 @@
 		D8C437071DD3D93500114A7A /* Files */ = {
 			isa = PBXGroup;
 			children = (
-				D8C437081DD3D94D00114A7A /* elected-candidates.csv */,
+				D8600B131F4CF8D900678746 /* elected-candidates.csv */,
 			);
 			name = Files;
 			sourceTree = "<group>";
@@ -728,12 +728,12 @@
 				D84689C41DD21339004C7600 /* mla_with_id__154.jpg in Resources */,
 				D8468A161DD2133A004C7600 /* mla_with_id__5808.jpg in Resources */,
 				D8468A201DD2133A004C7600 /* mla_with_id__90.jpg in Resources */,
-				D8C437091DD3D94D00114A7A /* elected-candidates.csv in Resources */,
 				D8468A0A1DD2133A004C7600 /* mla_with_id__5796.jpg in Resources */,
 				D84689F11DD21339004C7600 /* mla_with_id__3328.jpg in Resources */,
 				D84689FF1DD21339004C7600 /* mla_with_id__5595.jpg in Resources */,
 				D84689F91DD21339004C7600 /* mla_with_id__5223.jpg in Resources */,
 				D84260C21DDCDECF00ACB2E3 /* Colours.plist in Resources */,
+				D8600B141F4CF8D900678746 /* elected-candidates.csv in Resources */,
 				D8468A1A1DD2133A004C7600 /* mla_with_id__67.jpg in Resources */,
 				D84689BA1DD21339004C7600 /* mla_with_id__133.jpg in Resources */,
 				D84689B61DD21339004C7600 /* mla_with_id__105.jpg in Resources */,
