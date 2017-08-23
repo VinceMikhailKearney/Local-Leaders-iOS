@@ -31,7 +31,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate
 
         UIView.appearance(whenContainedInInstancesOf: [UITabBar.self]).tintColor = UIColor(white: 1.0, alpha: 0.3)
         UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor(white: 1.0, alpha: 1.0)], for: .selected)
-        UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor(white: 1.0, alpha: 0.3)], for: .normal)
+        UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor(white: 1.0, alpha: 0.8)], for: .normal)
+        UIApplication.shared.statusBarStyle = .lightContent
 
         return true
     }
@@ -58,3 +59,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 }
+
