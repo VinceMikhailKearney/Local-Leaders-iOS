@@ -43,11 +43,8 @@ open class LeaderRecord: BaseRealmObject
             newLeader.partyAbbreviation = dictionary["party"] as? String
             newLeader.partyName = dictionary["partyName"] as? String
             newLeader.title = dictionary["title"] as? String
-            /////////////////////////////////////////////////////////
-            // The two below are currently not available through the JSON response. CSV parsing still required.
-            newLeader.twitterHandle = ""
-            newLeader.emailAddress = ""
-            /////////////////////////////////////////////////////////
+            newLeader.twitterHandle = dictionary["twitter"] as? String
+            newLeader.emailAddress = dictionary["email"] as? String
             newLeader.constituency = dictionary["constituency"] as? String
 
             return newLeader
@@ -74,3 +71,4 @@ open class LeaderRecord: BaseRealmObject
         return Array(baseRealm().objects(try! realmType()).filter("constituency == %@", constituency)) as! Array<LeaderRecord>
     }
 }
+

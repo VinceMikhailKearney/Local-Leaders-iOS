@@ -59,7 +59,7 @@ class LeadersViewController: BaseViewController, UITableViewDelegate, UITableVie
     internal func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
         let leader: LeaderRecord = leaders![indexPath.row]
-        print("Just tapped MLA: \(leader.firstname!) \(leader.lastName!). Key -> \(leader.key!)")
+        print("Just tapped MLA: \(leader.firstname!) \(leader.lastName!). Key -> \(leader.key!). Email -> \(leader.emailAddress). Twitter -> \(leader.twitterHandle)")
         tableView.deselectRow(at: indexPath, animated: true)
     }
 
@@ -72,3 +72,4 @@ class LeadersViewController: BaseViewController, UITableViewDelegate, UITableVie
         return image
     }
 }
+
