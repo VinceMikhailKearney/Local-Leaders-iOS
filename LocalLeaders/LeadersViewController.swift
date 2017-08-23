@@ -8,10 +8,10 @@
 
 import UIKit
 
-class LeadersViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource
+class LeadersViewController: BaseViewController
 {
     // MARK: Properties
-    fileprivate var leaders: Array<LeaderRecord>?
+    fileprivate var leaders: [LeaderRecord]?
 
     // MARK: Outlets
     @IBOutlet weak var tableView: UITableView!
@@ -19,57 +19,62 @@ class LeadersViewController: BaseViewController, UITableViewDelegate, UITableVie
     override func viewDidLoad()
     {
         super.viewDidLoad()
-
-        leaders = Array<LeaderRecord>()
-        for object in LeaderRecord.allObjects() {
-            leaders?.append(object as! LeaderRecord)
-        }
-
+        leaders = LeaderRecord.allObjects() as? [LeaderRecord]
         tableView.delegate = self
         tableView.dataSource = self
         tableView.backgroundColor = UIColor.white
         navigationItem.title = "MLAs"
     }
 
-    // MARK: TableView Delegate Methods
-    internal func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int
+    // MARK: Helper methods
+    fileprivate func getImageFromFile(_ path: String) -> UIImage?
     {
-        return leaders!.count
-    }
+        if let filePath = Bundle.main.path(forResource: path, ofType: "jpg") {
+            return UIImage(contentsOfFile: filePath)
+        }
 
-    internal func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+        return nil
+    }
+}
+
+extension LeadersViewController: UITableViewDataSource
+{
+    func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int
+    {
+        return leaders?.count ?? 0
+    }
+}
+
+extension LeadersViewController: UITableViewDelegate
+{
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: "LeaderCell", for: indexPath) as! LeaderCell
 
-        let leader: LeaderRecord = leaders![indexPath.row]
-        cell.leaderFullName.text = "\(leader.firstname!) \(leader.lastName!)"
-        cell.leaderPartyName.text = leader.partyName!
-        cell.leaderConstituency.text = leader.constituency!
-        let leaderKey: String = leader.key!
-        cell.leaderImage.image = getImageFromFile("mla_with_id__\(leaderKey)")
+        guard let leaders = leaders else { return cell }
+        let leader: LeaderRecord = leaders[indexPath.row]
+        guard let firstName = leader.firstname, let lastName = leader.lastName,
+            let partyName = leader.partyName, let constituency = leader.constituency,
+            let key = leader.key else { return cell }
 
+        cell.leaderFullName.text = "\(firstName) \(lastName)"
+        cell.leaderPartyName.text = partyName
+        cell.leaderConstituency.text = constituency
+        cell.leaderImage.image = getImageFromFile("mla_with_id__\(key)")
         return cell
     }
 
-    internal func tableView(_: UITableView, heightForRowAt _: IndexPath) -> CGFloat
+    func tableView(_: UITableView, heightForRowAt _: IndexPath) -> CGFloat
     {
         return 100.0
     }
 
-    internal func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
-        let leader: LeaderRecord = leaders![indexPath.row]
-        print("Just tapped MLA: \(leader.firstname!) \(leader.lastName!). Key -> \(leader.key!). Email -> \(leader.emailAddress). Twitter -> \(leader.twitterHandle)")
+        guard let leaders = leaders else { return }
+        let leader: LeaderRecord = leaders[indexPath.row]
+        print("The leader is: \(leader)")
         tableView.deselectRow(at: indexPath, animated: true)
-    }
-
-    fileprivate func getImageFromFile(_ path: String) -> UIImage?
-    {
-        var image: UIImage?
-        if let filePath = Bundle.main.path(forResource: path, ofType: "jpg") {
-            image = UIImage(contentsOfFile: filePath)
-        }
-        return image
     }
 }
 
