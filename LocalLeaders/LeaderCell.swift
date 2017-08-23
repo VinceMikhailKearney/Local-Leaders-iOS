@@ -8,26 +8,26 @@
 
 import UIKit
 
-class LeaderCell : UITableViewCell
+class LeaderCell: UITableViewCell
 {
     @IBOutlet weak var leaderFullName: UILabel!
     @IBOutlet weak var leaderPartyName: UILabel!
     @IBOutlet weak var leaderConstituency: UILabel!
     @IBOutlet weak var leaderImage: UIImageView!
-    
+
     override func awakeFromNib()
     {
         super.awakeFromNib()
-        
-        self.backgroundColor = UIColor.clear
-        self.leaderFullName.textColor = UIColor.black
-        self.leaderPartyName.textColor = ThemeManager.getColor(ThemeManager.PINK)
-        self.leaderConstituency.textColor = UIColor.gray
-        
-        self.leaderImage.layer.cornerRadius = 40
-        self.leaderImage.layer.masksToBounds = true
-        self.leaderImage.contentMode = UIViewContentMode.scaleAspectFill
+
+        backgroundColor = UIColor.clear
+        leaderFullName.textColor = UIColor.black
+        leaderPartyName.textColor = ThemeManager.getColor(ThemeManager.PINK)
+        leaderConstituency.textColor = UIColor.gray
+
+        leaderImage.layer.cornerRadius = 40
+        leaderImage.layer.masksToBounds = true
+        leaderImage.contentMode = UIViewContentMode.scaleAspectFill
     }
-    
+
     ////////////////////////////////////END OF CLASS////////////////////////////////////
 }

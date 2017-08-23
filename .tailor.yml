@@ -1,0 +1,11 @@
+include:
+  - LocalLeaders
+exclude:
+  - '**Tests.swift'
+  - Carthage
+  - Makefile
+
+except:
+  - brace-style
+
+format: json

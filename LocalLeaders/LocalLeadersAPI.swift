@@ -11,18 +11,18 @@ import Alamofire
 
 let GET_MLAS_JSON = "https://vincetestaccount.herokuapp.com/leaders/mlas/"
 
-open class LocalLeadersAPI : NSObject
+open class LocalLeadersAPI: NSObject
 {
     static func getMlasJSON()
     {
-        LocalLeadersAPI.get(GET_MLAS_JSON) { (result : Dictionary<String, AnyObject>?) in
+        LocalLeadersAPI.get(GET_MLAS_JSON) { (result: Dictionary<String, AnyObject>?) in
             DispatchQueue.global().async {
                 ParserUtils.getMlasFromArray(result!["response"] as! Array<AnyObject>)
             }
         }
     }
-    
-    static func get(_ url: String, completion: @escaping (_ result : Dictionary<String, AnyObject>?) -> Void)
+
+    static func get(_ url: String, completion: @escaping (_ result: Dictionary<String, AnyObject>?) -> Void)
     {
         DispatchQueue.global().async {
             Alamofire.request(url).validate().responseJSON { response in
@@ -34,8 +34,8 @@ open class LocalLeadersAPI : NSObject
                         completion(JSON as? Dictionary<String, AnyObject>)
                     }
                     break
-                    
-                case .failure(let error):
+
+                case let .failure(error):
                     print("GET request failed")
                     print(error)
                     break

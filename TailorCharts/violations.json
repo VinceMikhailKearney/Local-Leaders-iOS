@@ -1,0 +1,600 @@
+{
+  "files": [
+    {
+      "path": "/Users/vincekearney/Documents/MyProjects/iOS/LocalLeaders/LocalLeaders/AppDelegate.swift",
+      "violations": [
+        {
+          "severity": "warning",
+          "rule": "min-name-length",
+          "location": {
+            "line": 16,
+            "column": 115
+          },
+          "message": "Type name is less than minimum character limit (4/5)"
+        },
+        {
+          "severity": "warning",
+          "rule": "function-whitespace",
+          "location": {
+            "line": 59,
+            "column": 6
+          },
+          "message": "Function should have at least one blank line after it"
+        }
+      ],
+      "parsed": true
+    },
+    {
+      "path": "/Users/vincekearney/Documents/MyProjects/iOS/LocalLeaders/LocalLeaders/BaseRealmObject.swift",
+      "violations": [
+        {
+          "severity": "warning",
+          "rule": "upper-camel-case",
+          "location": {
+            "line": 12,
+            "column": 6
+          },
+          "message": "Enum names should be UpperCamelCase"
+        },
+        {
+          "severity": "warning",
+          "rule": "function-whitespace",
+          "location": {
+            "line": 21,
+            "column": 5
+          },
+          "message": "Function should have at least one blank line before it"
+        },
+        {
+          "severity": "warning",
+          "rule": "min-name-length",
+          "location": {
+            "line": 55,
+            "column": 10
+          },
+          "message": "Function name is less than minimum character limit (4/5)"
+        },
+        {
+          "severity": "warning",
+          "rule": "trailing-closure",
+          "location": {
+            "line": 58,
+            "column": 26
+          },
+          "message": "Closure is the function's final argument and may be passed as a trailing closure instead"
+        },
+        {
+          "severity": "warning",
+          "rule": "trailing-closure",
+          "location": {
+            "line": 66,
+            "column": 26
+          },
+          "message": "Closure is the function's final argument and may be passed as a trailing closure instead"
+        },
+        {
+          "severity": "warning",
+          "rule": "trailing-closure",
+          "location": {
+            "line": 76,
+            "column": 30
+          },
+          "message": "Closure is the function's final argument and may be passed as a trailing closure instead"
+        },
+        {
+          "severity": "warning",
+          "rule": "min-name-length",
+          "location": {
+            "line": 82,
+            "column": 32
+          },
+          "message": "Constant name is less than minimum character limit (3/5)"
+        },
+        {
+          "severity": "warning",
+          "rule": "function-whitespace",
+          "location": {
+            "line": 96,
+            "column": 6
+          },
+          "message": "Function should have at least one blank line after it"
+        }
+      ],
+      "parsed": true
+    },
+    {
+      "path": "/Users/vincekearney/Documents/MyProjects/iOS/LocalLeaders/LocalLeaders/BaseViewController.swift",
+      "violations": [
+        {
+          "severity": "warning",
+          "rule": "function-whitespace",
+          "location": {
+            "line": 13,
+            "column": 5
+          },
+          "message": "Function should have at least one blank line before it"
+        },
+        {
+          "severity": "warning",
+          "rule": "function-whitespace",
+          "location": {
+            "line": 22,
+            "column": 6
+          },
+          "message": "Function should have at least one blank line after it"
+        }
+      ],
+      "parsed": true
+    },
+    {
+      "path": "/Users/vincekearney/Documents/MyProjects/iOS/LocalLeaders/LocalLeaders/LeaderCell.swift",
+      "violations": [
+        {
+          "severity": "warning",
+          "rule": "comment-whitespace",
+          "location": {
+            "line": 32,
+            "column": 7
+          },
+          "message": "Single-line comment should start with whitespace"
+        }
+      ],
+      "parsed": true
+    },
+    {
+      "path": "/Users/vincekearney/Documents/MyProjects/iOS/LocalLeaders/LocalLeaders/LeaderRecord.swift",
+      "violations": [
+        {
+          "severity": "warning",
+          "rule": "min-name-length",
+          "location": {
+            "line": 15,
+            "column": 17
+          },
+          "message": "Variable name is less than minimum character limit (3/5)"
+        },
+        {
+          "severity": "warning",
+          "rule": "min-name-length",
+          "location": {
+            "line": 34,
+            "column": 13
+          },
+          "message": "Constant name is less than minimum character limit (3/5)"
+        },
+        {
+          "severity": "warning",
+          "rule": "forced-type-cast",
+          "location": {
+            "line": 34,
+            "column": 55
+          },
+          "message": "Force casts should be avoided"
+        },
+        {
+          "severity": "warning",
+          "rule": "min-name-length",
+          "location": {
+            "line": 34,
+            "column": 57
+          },
+          "message": "Type name is less than minimum character limit (3/5)"
+        },
+        {
+          "severity": "warning",
+          "rule": "comment-whitespace",
+          "location": {
+            "line": 46,
+            "column": 15
+          },
+          "message": "Single-line comment should start with whitespace"
+        },
+        {
+          "severity": "warning",
+          "rule": "comment-whitespace",
+          "location": {
+            "line": 50,
+            "column": 15
+          },
+          "message": "Single-line comment should start with whitespace"
+        },
+        {
+          "severity": "warning",
+          "rule": "trailing-closure",
+          "location": {
+            "line": 61,
+            "column": 48
+          },
+          "message": "Closure is the function's final argument and may be passed as a trailing closure instead"
+        },
+        {
+          "severity": "warning",
+          "rule": "trailing-closure",
+          "location": {
+            "line": 68,
+            "column": 48
+          },
+          "message": "Closure is the function's final argument and may be passed as a trailing closure instead"
+        },
+        {
+          "severity": "warning",
+          "rule": "forced-type-cast",
+          "location": {
+            "line": 74,
+            "column": 106
+          },
+          "message": "Force casts should be avoided"
+        },
+        {
+          "severity": "warning",
+          "rule": "function-whitespace",
+          "location": {
+            "line": 75,
+            "column": 6
+          },
+          "message": "Function should have at least one blank line after it"
+        }
+      ],
+      "parsed": true
+    },
+    {
+      "path": "/Users/vincekearney/Documents/MyProjects/iOS/LocalLeaders/LocalLeaders/LeadersViewController.swift",
+      "violations": [
+        {
+          "severity": "warning",
+          "rule": "forced-type-cast",
+          "location": {
+            "line": 25,
+            "column": 38
+          },
+          "message": "Force casts should be avoided"
+        },
+        {
+          "severity": "warning",
+          "rule": "min-name-length",
+          "location": {
+            "line": 35,
+            "column": 70
+          },
+          "message": "Type name is less than minimum character limit (3/5)"
+        },
+        {
+          "severity": "warning",
+          "rule": "min-name-length",
+          "location": {
+            "line": 35,
+            "column": 78
+          },
+          "message": "Type name is less than minimum character limit (3/5)"
+        },
+        {
+          "severity": "warning",
+          "rule": "min-name-length",
+          "location": {
+            "line": 42,
+            "column": 13
+          },
+          "message": "Constant name is less than minimum character limit (4/5)"
+        },
+        {
+          "severity": "warning",
+          "rule": "forced-type-cast",
+          "location": {
+            "line": 42,
+            "column": 98
+          },
+          "message": "Force casts should be avoided"
+        },
+        {
+          "severity": "warning",
+          "rule": "min-name-length",
+          "location": {
+            "line": 66,
+            "column": 41
+          },
+          "message": "Constant name is less than minimum character limit (4/5)"
+        },
+        {
+          "severity": "warning",
+          "rule": "function-whitespace",
+          "location": {
+            "line": 73,
+            "column": 6
+          },
+          "message": "Function should have at least one blank line after it"
+        }
+      ],
+      "parsed": true
+    },
+    {
+      "path": "/Users/vincekearney/Documents/MyProjects/iOS/LocalLeaders/LocalLeaders/LocalLeadersAPI.swift",
+      "violations": [],
+      "parsed": false
+    },
+    {
+      "path": "/Users/vincekearney/Documents/MyProjects/iOS/LocalLeaders/LocalLeaders/ParserUtils.swift",
+      "violations": [
+        {
+          "severity": "warning",
+          "rule": "constant-naming",
+          "location": {
+            "line": 14,
+            "column": 16
+          },
+          "message": "Global Constant should be either lowerCamelCase or UpperCamelCase"
+        },
+        {
+          "severity": "warning",
+          "rule": "min-name-length",
+          "location": {
+            "line": 14,
+            "column": 34
+          },
+          "message": "Type name is less than minimum character limit (3/5)"
+        },
+        {
+          "severity": "warning",
+          "rule": "constant-naming",
+          "location": {
+            "line": 15,
+            "column": 16
+          },
+          "message": "Global Constant should be either lowerCamelCase or UpperCamelCase"
+        },
+        {
+          "severity": "warning",
+          "rule": "min-name-length",
+          "location": {
+            "line": 15,
+            "column": 32
+          },
+          "message": "Type name is less than minimum character limit (3/5)"
+        },
+        {
+          "severity": "warning",
+          "rule": "min-name-length",
+          "location": {
+            "line": 31,
+            "column": 54
+          },
+          "message": "Constant name is less than minimum character limit (4/5)"
+        },
+        {
+          "severity": "warning",
+          "rule": "min-name-length",
+          "location": {
+            "line": 35,
+            "column": 46
+          },
+          "message": "Constant name is less than minimum character limit (4/5)"
+        },
+        {
+          "severity": "warning",
+          "rule": "min-name-length",
+          "location": {
+            "line": 39,
+            "column": 30
+          },
+          "message": "Constant name is less than minimum character limit (4/5)"
+        },
+        {
+          "severity": "warning",
+          "rule": "min-name-length",
+          "location": {
+            "line": 39,
+            "column": 36
+          },
+          "message": "Type name is less than minimum character limit (3/5)"
+        },
+        {
+          "severity": "warning",
+          "rule": "min-name-length",
+          "location": {
+            "line": 39,
+            "column": 56
+          },
+          "message": "Constant name is less than minimum character limit (4/5)"
+        },
+        {
+          "severity": "warning",
+          "rule": "function-whitespace",
+          "location": {
+            "line": 67,
+            "column": 6
+          },
+          "message": "Function should have at least one blank line after it"
+        }
+      ],
+      "parsed": true
+    },
+    {
+      "path": "/Users/vincekearney/Documents/MyProjects/iOS/LocalLeaders/LocalLeaders/PartyRecord.swift",
+      "violations": [
+        {
+          "severity": "warning",
+          "rule": "min-name-length",
+          "location": {
+            "line": 15,
+            "column": 17
+          },
+          "message": "Variable name is less than minimum character limit (3/5)"
+        },
+        {
+          "severity": "warning",
+          "rule": "min-name-length",
+          "location": {
+            "line": 16,
+            "column": 17
+          },
+          "message": "Variable name is less than minimum character limit (4/5)"
+        },
+        {
+          "severity": "warning",
+          "rule": "min-name-length",
+          "location": {
+            "line": 21,
+            "column": 74
+          },
+          "message": "Constant name is less than minimum character limit (3/5)"
+        },
+        {
+          "severity": "warning",
+          "rule": "function-whitespace",
+          "location": {
+            "line": 41,
+            "column": 6
+          },
+          "message": "Function should have at least one blank line after it"
+        }
+      ],
+      "parsed": true
+    },
+    {
+      "path": "/Users/vincekearney/Documents/MyProjects/iOS/LocalLeaders/LocalLeaders/SocialViewController.swift",
+      "violations": [
+        {
+          "severity": "warning",
+          "rule": "function-whitespace",
+          "location": {
+            "line": 13,
+            "column": 5
+          },
+          "message": "Function should have at least one blank line before it"
+        },
+        {
+          "severity": "warning",
+          "rule": "min-name-length",
+          "location": {
+            "line": 18,
+            "column": 46
+          },
+          "message": "Type name is less than minimum character limit (4/5)"
+        },
+        {
+          "severity": "warning",
+          "rule": "function-whitespace",
+          "location": {
+            "line": 21,
+            "column": 6
+          },
+          "message": "Function should have at least one blank line after it"
+        }
+      ],
+      "parsed": true
+    },
+    {
+      "path": "/Users/vincekearney/Documents/MyProjects/iOS/LocalLeaders/LocalLeaders/TabBarController.swift",
+      "violations": [],
+      "parsed": true
+    },
+    {
+      "path": "/Users/vincekearney/Documents/MyProjects/iOS/LocalLeaders/LocalLeaders/ThemeManager.swift",
+      "violations": [
+        {
+          "severity": "warning",
+          "rule": "upper-camel-case",
+          "location": {
+            "line": 12,
+            "column": 6
+          },
+          "message": "Enum names should be UpperCamelCase"
+        },
+        {
+          "severity": "warning",
+          "rule": "min-name-length",
+          "location": {
+            "line": 21,
+            "column": 16
+          },
+          "message": "Constant name is less than minimum character limit (4/5)"
+        },
+        {
+          "severity": "warning",
+          "rule": "min-name-length",
+          "location": {
+            "line": 22,
+            "column": 16
+          },
+          "message": "Constant name is less than minimum character limit (4/5)"
+        },
+        {
+          "severity": "warning",
+          "rule": "constant-naming",
+          "location": {
+            "line": 24,
+            "column": 16
+          },
+          "message": "Global Constant should be either lowerCamelCase or UpperCamelCase"
+        },
+        {
+          "severity": "warning",
+          "rule": "constant-naming",
+          "location": {
+            "line": 25,
+            "column": 16
+          },
+          "message": "Global Constant should be either lowerCamelCase or UpperCamelCase"
+        },
+        {
+          "severity": "warning",
+          "rule": "function-whitespace",
+          "location": {
+            "line": 39,
+            "column": 6
+          },
+          "message": "Function should have at least one blank line after it"
+        }
+      ],
+      "parsed": true
+    },
+    {
+      "path": "/Users/vincekearney/Documents/MyProjects/iOS/LocalLeaders/LocalLeaders/UIColorUitls.swift",
+      "violations": [
+        {
+          "severity": "warning",
+          "rule": "min-name-length",
+          "location": {
+            "line": 16,
+            "column": 13
+          },
+          "message": "Constant name is less than minimum character limit (1/5)"
+        },
+        {
+          "severity": "warning",
+          "rule": "min-name-length",
+          "location": {
+            "line": 16,
+            "column": 16
+          },
+          "message": "Constant name is less than minimum character limit (1/5)"
+        },
+        {
+          "severity": "warning",
+          "rule": "min-name-length",
+          "location": {
+            "line": 16,
+            "column": 19
+          },
+          "message": "Constant name is less than minimum character limit (1/5)"
+        },
+        {
+          "severity": "warning",
+          "rule": "min-name-length",
+          "location": {
+            "line": 16,
+            "column": 22
+          },
+          "message": "Constant name is less than minimum character limit (1/5)"
+        }
+      ],
+      "parsed": true
+    }
+  ],
+  "summary": {
+    "violations": 57,
+    "warnings": 57,
+    "analyzed": 12,
+    "errors": 0,
+    "skipped": 1
+  }
+}

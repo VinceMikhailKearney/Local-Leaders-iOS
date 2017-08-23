@@ -14,7 +14,7 @@ class SocialViewController: BaseViewController
     {
         super.viewDidLoad()
     }
-    
+
     override func viewWillAppear(_ animated: Bool)
     {
         super.viewWillAppear(animated)

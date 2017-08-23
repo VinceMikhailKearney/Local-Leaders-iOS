@@ -19,26 +19,26 @@ extension UIColor
         {
             let start = hexString.index(hexString.startIndex, offsetBy: 2)
             let hexColor = hexString.substring(from: start)
-            
+
             // If there are only 6, then we don't need to change the alpha. Which we probably never will.
             if hexColor.characters.count == 6
             {
                 let scanner = Scanner(string: hexColor)
                 var hexNumber: UInt64 = 0
-                
+
                 if scanner.scanHexInt64(&hexNumber)
                 {
                     r = CGFloat((hexNumber & 0xFF0000) >> 16) / 255
                     g = CGFloat((hexNumber & 0xFF00) >> 8) / 255
                     b = CGFloat(hexNumber & 0xFF) / 255
-                    a = CGFloat((hexNumber & 0xFFFFFF00) >> 8) / 255
-                    
+                    a = CGFloat((hexNumber & 0xFFFF_FF00) >> 8) / 255
+
                     self.init(red: r, green: g, blue: b, alpha: a)
                     return
                 }
             }
         }
-        
+
         return nil
     }
 }
