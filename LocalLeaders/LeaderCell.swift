@@ -28,6 +28,5 @@ class LeaderCell: UITableViewCell
         leaderImage.layer.masksToBounds = true
         leaderImage.contentMode = UIViewContentMode.scaleAspectFill
     }
-
-    ////////////////////////////////////END OF CLASS////////////////////////////////////
 }
+
