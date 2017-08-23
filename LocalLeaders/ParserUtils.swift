@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ * This class is no longer used as the server now takes care of putting the data together so the clients don't have to.
+ */
 open class ParserUtils: NSObject
 {
     // MARK: Properties
@@ -19,8 +22,9 @@ open class ParserUtils: NSObject
         for object in array {
             if let leaderDictionary = object as? Dictionary<String, AnyObject> {
                 let newLeader = LeaderRecord.create(dictionary: leaderDictionary)
-                newLeader?.updateTwitterHandle(fetchTwitterHandleFor(first: newLeader!.firstname!, last: newLeader!.lastName!))
-                newLeader?.updateEmailAddress(fetchEmailFor(first: newLeader!.firstname!, last: newLeader!.lastName!))
+                guard let leader = newLeader else { continue }
+                newLeader?.updateTwitterHandle(fetchTwitterHandleFor(first: leader.firstname, last: leader.lastName))
+                newLeader?.updateEmailAddress(fetchEmailFor(first: leader.firstname, last: leader.lastName))
                 newLeader?.save()
             }
         }
@@ -28,15 +32,17 @@ open class ParserUtils: NSObject
         print(LeaderRecord.allObjects().count)
     }
 
-    static func fetchTwitterHandleFor(first: String, last: String) -> String! {
+    static func fetchTwitterHandleFor(first: String, last: String) -> String
+    {
         return fetchDataFor(data: TWITTER_ROW_DATA, first: first, last: last)
     }
 
-    static func fetchEmailFor(first: String, last: String) -> String! {
+    static func fetchEmailFor(first: String, last: String) -> String
+    {
         return fetchDataFor(data: EMAIL_ROW_DATA, first: first, last: last)
     }
 
-    static func fetchDataFor(data: Int, first: String, last: String) -> String!
+    static func fetchDataFor(data: Int, first: String, last: String) -> String
     {
         var result = ""
 
@@ -60,9 +66,11 @@ open class ParserUtils: NSObject
                     result = rowData[data]
                 }
             }
-        } else
-        { print("Unable to get path to csv file.") }
+        } else {
+            print("Unable to get path to csv file.")
+        }
 
         return result
     }
 }
+

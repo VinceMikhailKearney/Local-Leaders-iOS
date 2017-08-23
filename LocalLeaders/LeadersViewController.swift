@@ -26,14 +26,11 @@ class LeadersViewController: BaseViewController
         navigationItem.title = "MLAs"
     }
 
-    // MARK: Helper methods
-    fileprivate func getImageFromFile(_ path: String) -> UIImage?
-    {
-        if let filePath = Bundle.main.path(forResource: path, ofType: "jpg") {
-            return UIImage(contentsOfFile: filePath)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showMla" {
+            let profileViewController = segue.destination as? ProfileViewController
+            profileViewController?.mla = sender as? LeaderRecord
         }
-
-        return nil
     }
 }
 
@@ -53,14 +50,10 @@ extension LeadersViewController: UITableViewDelegate
 
         guard let leaders = leaders else { return cell }
         let leader: LeaderRecord = leaders[indexPath.row]
-        guard let firstName = leader.firstname, let lastName = leader.lastName,
-            let partyName = leader.partyName, let constituency = leader.constituency,
-            let key = leader.key else { return cell }
-
-        cell.leaderFullName.text = "\(firstName) \(lastName)"
-        cell.leaderPartyName.text = partyName
-        cell.leaderConstituency.text = constituency
-        cell.leaderImage.image = getImageFromFile("mla_with_id__\(key)")
+        cell.leaderFullName.text = "\(leader.firstname) \(leader.lastName)"
+        cell.leaderPartyName.text = leader.partyName
+        cell.leaderConstituency.text = leader.constituency
+        cell.leaderImage.image = Utils.getImageFromFile("mla_with_id__\(leader.key)")
         return cell
     }
 
@@ -74,6 +67,7 @@ extension LeadersViewController: UITableViewDelegate
         guard let leaders = leaders else { return }
         let leader: LeaderRecord = leaders[indexPath.row]
         print("The leader is: \(leader)")
+        performSegue(withIdentifier: "showMla", sender: leader)
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }

@@ -26,7 +26,7 @@ class LeaderCell: UITableViewCell
 
         leaderImage.layer.cornerRadius = 40
         leaderImage.layer.masksToBounds = true
-        leaderImage.contentMode = UIViewContentMode.scaleAspectFill
+        leaderImage.contentMode = .scaleAspectFill
     }
 }
 

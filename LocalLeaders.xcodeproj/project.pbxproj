@@ -132,6 +132,8 @@
 		D8520FE81DD3FCE60083B056 /* ParserUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8520FE71DD3FCE60083B056 /* ParserUtils.swift */; };
 		D8600B141F4CF8D900678746 /* elected-candidates.csv in Resources */ = {isa = PBXBuildFile; fileRef = D8600B131F4CF8D900678746 /* elected-candidates.csv */; };
 		D8934BBC1DDB744800A0534E /* LeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8934BBB1DDB744800A0534E /* LeaderCell.swift */; };
+		D8ADF4991F4E380500F189E2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8ADF4981F4E380500F189E2 /* ProfileViewController.swift */; };
+		D8ADF49D1F4E3EE600F189E2 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8ADF49C1F4E3EE600F189E2 /* Utils.swift */; };
 		D8AE2E891DD3C57C006C2C47 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AE2E881DD3C57C006C2C47 /* BaseViewController.swift */; };
 		D8AE2E8C1DD3C691006C2C47 /* LocalLeadersAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AE2E8B1DD3C691006C2C47 /* LocalLeadersAPI.swift */; };
 		D8D0100D1DD397C2003432B6 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8D0100B1DD397C2003432B6 /* Realm.framework */; };
@@ -310,6 +312,8 @@
 		D8520FE71DD3FCE60083B056 /* ParserUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParserUtils.swift; sourceTree = "<group>"; };
 		D8600B131F4CF8D900678746 /* elected-candidates.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "elected-candidates.csv"; path = "Files/elected-candidates.csv"; sourceTree = "<group>"; };
 		D8934BBB1DDB744800A0534E /* LeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderCell.swift; sourceTree = "<group>"; };
+		D8ADF4981F4E380500F189E2 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		D8ADF49C1F4E3EE600F189E2 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		D8AE2E881DD3C57C006C2C47 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		D8AE2E8B1DD3C691006C2C47 /* LocalLeadersAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalLeadersAPI.swift; sourceTree = "<group>"; };
 		D8D0100B1DD397C2003432B6 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
@@ -381,6 +385,7 @@
 				D8520FE71DD3FCE60083B056 /* ParserUtils.swift */,
 				D84260C31DDCDF2D00ACB2E3 /* ThemeManager.swift */,
 				D84260C51DDCE6D700ACB2E3 /* UIColorUitls.swift */,
+				D8ADF49C1F4E3EE600F189E2 /* Utils.swift */,
 				D838CD071DD20CF1002AE07B /* Info.plist */,
 			);
 			path = LocalLeaders;
@@ -545,9 +550,10 @@
 			isa = PBXGroup;
 			children = (
 				D8AE2E881DD3C57C006C2C47 /* BaseViewController.swift */,
-				D838CCFB1DD20CF1002AE07B /* LeadersViewController.swift */,
-				D838CCFD1DD20CF1002AE07B /* SocialViewController.swift */,
 				D8934BBB1DDB744800A0534E /* LeaderCell.swift */,
+				D838CCFB1DD20CF1002AE07B /* LeadersViewController.swift */,
+				D8ADF4981F4E380500F189E2 /* ProfileViewController.swift */,
+				D838CCFD1DD20CF1002AE07B /* SocialViewController.swift */,
 				D84260C71DDCF55400ACB2E3 /* TabBarController.swift */,
 			);
 			name = ViewControllers;
@@ -651,7 +657,7 @@
 				TargetAttributes = {
 					D838CCF51DD20CF1002AE07B = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 73S8PFBWGP;
+						DevelopmentTeam = 6HZFYV4ZLM;
 						ProvisioningStyle = Automatic;
 					};
 					D838CD0B1DD20CF1002AE07B = {
@@ -867,6 +873,8 @@
 				D84260C81DDCF55400ACB2E3 /* TabBarController.swift in Sources */,
 				D838CCFE1DD20CF1002AE07B /* SocialViewController.swift in Sources */,
 				D838CCFA1DD20CF1002AE07B /* AppDelegate.swift in Sources */,
+				D8ADF4991F4E380500F189E2 /* ProfileViewController.swift in Sources */,
+				D8ADF49D1F4E3EE600F189E2 /* Utils.swift in Sources */,
 				D8934BBC1DDB744800A0534E /* LeaderCell.swift in Sources */,
 				D8D0101B1DD3993C003432B6 /* PartyRecord.swift in Sources */,
 				D838CCFC1DD20CF1002AE07B /* LeadersViewController.swift in Sources */,
@@ -1025,14 +1033,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 73S8PFBWGP;
+				DEVELOPMENT_TEAM = 6HZFYV4ZLM;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = LocalLeaders/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mav.LocalLeaders;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vince.localleaders;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -1042,14 +1050,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 73S8PFBWGP;
+				DEVELOPMENT_TEAM = 6HZFYV4ZLM;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = LocalLeaders/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mav.LocalLeaders;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vince.localleaders;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
