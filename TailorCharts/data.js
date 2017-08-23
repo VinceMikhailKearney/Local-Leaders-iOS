@@ -183,26 +183,8 @@ violations = {
                 }, 
                 {
                     "location": {
-                        "column": 15, 
-                        "line": 46
-                    }, 
-                    "message": "Single-line comment should start with whitespace", 
-                    "rule": "comment-whitespace", 
-                    "severity": "warning"
-                }, 
-                {
-                    "location": {
-                        "column": 15, 
-                        "line": 50
-                    }, 
-                    "message": "Single-line comment should start with whitespace", 
-                    "rule": "comment-whitespace", 
-                    "severity": "warning"
-                }, 
-                {
-                    "location": {
                         "column": 48, 
-                        "line": 61
+                        "line": 58
                     }, 
                     "message": "Closure is the function's final argument and may be passed as a trailing closure instead", 
                     "rule": "trailing-closure", 
@@ -211,7 +193,7 @@ violations = {
                 {
                     "location": {
                         "column": 48, 
-                        "line": 68
+                        "line": 65
                     }, 
                     "message": "Closure is the function's final argument and may be passed as a trailing closure instead", 
                     "rule": "trailing-closure", 
@@ -220,7 +202,7 @@ violations = {
                 {
                     "location": {
                         "column": 106, 
-                        "line": 74
+                        "line": 71
                     }, 
                     "message": "Force casts should be avoided", 
                     "rule": "forced-type-cast", 
@@ -229,10 +211,18 @@ violations = {
                 {
                     "location": {
                         "column": 6, 
-                        "line": 75
+                        "line": 72
                     }, 
                     "message": "Function should have at least one blank line after it", 
                     "rule": "function-whitespace", 
+                    "severity": "warning"
+                }, 
+                {
+                    "location": {
+                        "line": 74
+                    }, 
+                    "message": "File should terminate with exactly one newline character ('\\n')", 
+                    "rule": "terminating-newline", 
                     "severity": "warning"
                 }
             ]
@@ -302,6 +292,14 @@ violations = {
                     }, 
                     "message": "Function should have at least one blank line after it", 
                     "rule": "function-whitespace", 
+                    "severity": "warning"
+                }, 
+                {
+                    "location": {
+                        "line": 75
+                    }, 
+                    "message": "File should terminate with exactly one newline character ('\\n')", 
+                    "rule": "terminating-newline", 
                     "severity": "warning"
                 }
             ]
