@@ -134,6 +134,10 @@
 		D8934BBC1DDB744800A0534E /* LeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8934BBB1DDB744800A0534E /* LeaderCell.swift */; };
 		D8ADF4991F4E380500F189E2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8ADF4981F4E380500F189E2 /* ProfileViewController.swift */; };
 		D8ADF49D1F4E3EE600F189E2 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8ADF49C1F4E3EE600F189E2 /* Utils.swift */; };
+		D8ADF4A31F4EE4A900F189E2 /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8ADF49F1F4EE4A900F189E2 /* TwitterCore.framework */; };
+		D8ADF4A41F4EE4A900F189E2 /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8ADF4A01F4EE4A900F189E2 /* TwitterKit.framework */; };
+		D8ADF4A51F4EE4A900F189E2 /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D8ADF4A11F4EE4A900F189E2 /* TwitterKitResources.bundle */; };
+		D8ADF4A61F4EE4A900F189E2 /* TwitterShareExtensionUIResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D8ADF4A21F4EE4A900F189E2 /* TwitterShareExtensionUIResources.bundle */; };
 		D8AE2E891DD3C57C006C2C47 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AE2E881DD3C57C006C2C47 /* BaseViewController.swift */; };
 		D8AE2E8C1DD3C691006C2C47 /* LocalLeadersAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AE2E8B1DD3C691006C2C47 /* LocalLeadersAPI.swift */; };
 		D8D0100D1DD397C2003432B6 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8D0100B1DD397C2003432B6 /* Realm.framework */; };
@@ -314,6 +318,10 @@
 		D8934BBB1DDB744800A0534E /* LeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderCell.swift; sourceTree = "<group>"; };
 		D8ADF4981F4E380500F189E2 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		D8ADF49C1F4E3EE600F189E2 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		D8ADF49F1F4EE4A900F189E2 /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterCore.framework; sourceTree = "<group>"; };
+		D8ADF4A01F4EE4A900F189E2 /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
+		D8ADF4A11F4EE4A900F189E2 /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TwitterKitResources.bundle; sourceTree = "<group>"; };
+		D8ADF4A21F4EE4A900F189E2 /* TwitterShareExtensionUIResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TwitterShareExtensionUIResources.bundle; sourceTree = "<group>"; };
 		D8AE2E881DD3C57C006C2C47 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		D8AE2E8B1DD3C691006C2C47 /* LocalLeadersAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalLeadersAPI.swift; sourceTree = "<group>"; };
 		D8D0100B1DD397C2003432B6 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
@@ -328,10 +336,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8ADF4A31F4EE4A900F189E2 /* TwitterCore.framework in Frameworks */,
 				D838CD2B1DD20F27002AE07B /* SwiftyJSON.framework in Frameworks */,
 				D838CD2E1DD211BC002AE07B /* Alamofire.framework in Frameworks */,
 				D8D0100D1DD397C2003432B6 /* Realm.framework in Frameworks */,
 				D8D0100E1DD397C2003432B6 /* RealmSwift.framework in Frameworks */,
+				D8ADF4A41F4EE4A900F189E2 /* TwitterKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,6 +365,7 @@
 		D838CCED1DD20CF0002AE07B = {
 			isa = PBXGroup;
 			children = (
+				D8ADF49E1F4EE4A900F189E2 /* Twitter-Kit-iOS */,
 				D838CCF81DD20CF1002AE07B /* LocalLeaders */,
 				D838CD0F1DD20CF1002AE07B /* LocalLeadersTests */,
 				D838CD1A1DD20CF1002AE07B /* LocalLeadersUITests */,
@@ -546,6 +557,17 @@
 			path = MLAs;
 			sourceTree = "<group>";
 		};
+		D8ADF49E1F4EE4A900F189E2 /* Twitter-Kit-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				D8ADF49F1F4EE4A900F189E2 /* TwitterCore.framework */,
+				D8ADF4A01F4EE4A900F189E2 /* TwitterKit.framework */,
+				D8ADF4A11F4EE4A900F189E2 /* TwitterKitResources.bundle */,
+				D8ADF4A21F4EE4A900F189E2 /* TwitterShareExtensionUIResources.bundle */,
+			);
+			path = "Twitter-Kit-iOS";
+			sourceTree = "<group>";
+		};
 		D8AE2E871DD3C557006C2C47 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -727,6 +749,7 @@
 				D84689BF1DD21339004C7600 /* mla_with_id__141.jpg in Resources */,
 				D838CD061DD20CF1002AE07B /* LaunchScreen.storyboard in Resources */,
 				D84689E61DD21339004C7600 /* mla_with_id__300.jpg in Resources */,
+				D8ADF4A51F4EE4A900F189E2 /* TwitterKitResources.bundle in Resources */,
 				D84689E11DD21339004C7600 /* mla_with_id__290.jpg in Resources */,
 				D84689F51DD21339004C7600 /* mla_with_id__4465.jpg in Resources */,
 				D8468A031DD21339004C7600 /* mla_with_id__5789.jpg in Resources */,
@@ -777,6 +800,7 @@
 				D84689ED1DD21339004C7600 /* mla_with_id__307.jpg in Resources */,
 				D84689DF1DD21339004C7600 /* mla_with_id__288.jpg in Resources */,
 				D84689F31DD21339004C7600 /* mla_with_id__41.jpg in Resources */,
+				D8ADF4A61F4EE4A900F189E2 /* TwitterShareExtensionUIResources.bundle in Resources */,
 				D8468A1F1DD2133A004C7600 /* mla_with_id__80.jpg in Resources */,
 				D84689BE1DD21339004C7600 /* mla_with_id__140.jpg in Resources */,
 				D84689C01DD21339004C7600 /* mla_with_id__144.jpg in Resources */,
@@ -1037,6 +1061,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Twitter-Kit-iOS",
 				);
 				INFOPLIST_FILE = LocalLeaders/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1054,6 +1079,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Twitter-Kit-iOS",
 				);
 				INFOPLIST_FILE = LocalLeaders/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

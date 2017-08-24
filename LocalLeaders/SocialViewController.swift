@@ -7,12 +7,18 @@
 //
 
 import UIKit
+import TwitterKit
 
-class SocialViewController: BaseViewController
+class SocialViewController: TWTRTimelineViewController
 {
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        dataSource = TWTRUserTimelineDataSource(screenName: "vmjkearney", apiClient: TWTRAPIClient())
+        showTweetActions = true
+        navigationController?.navigationBar.barTintColor = ThemeManager.getColor(ThemeManager.PRIMARY)
+        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: ThemeManager.getColor(ThemeManager.TITLE_COLOR)!]
+        navigationItem.title = "Social"
     }
 
     override func viewWillAppear(_ animated: Bool)
@@ -20,3 +26,4 @@ class SocialViewController: BaseViewController
         super.viewWillAppear(animated)
     }
 }
+

@@ -66,7 +66,6 @@ extension LeadersViewController: UITableViewDelegate
     {
         guard let leaders = leaders else { return }
         let leader: LeaderRecord = leaders[indexPath.row]
-        print("The leader is: \(leader)")
         performSegue(withIdentifier: "showMla", sender: leader)
         tableView.deselectRow(at: indexPath, animated: true)
     }

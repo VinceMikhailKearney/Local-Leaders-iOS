@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import TwitterKit
 
 class ProfileViewController: BaseViewController
 {
@@ -16,8 +17,8 @@ class ProfileViewController: BaseViewController
     // MARK: - Outlets
     @IBOutlet weak var coverView: UIView!
     @IBOutlet weak var profileImage: UIImageView!
-    @IBOutlet weak var mlaName: UILabel!
     @IBOutlet weak var mlaParty: UILabel!
+    @IBOutlet weak var mlaName: UILabel!
     @IBOutlet weak var mlaConstituency: UILabel!
     @IBOutlet weak var mlaAboutTextView: UITextView!
 
@@ -55,7 +56,24 @@ class ProfileViewController: BaseViewController
 
     @IBAction func tweetUser(_: UIButton)
     {
-        print("Tweet user with handle: \(mla?.twitterHandle ?? "None")")
+        //        if (Twitter.sharedInstance().sessionStore.hasLoggedInUsers()) {
+        //            // App must have at least one logged-in user to compose a Tweet
+        //            let composer = TWTRComposerViewController.emptyComposer()
+        //            present(composer, animated: true, completion: nil)
+        //        } else {
+        //            // Log in, and then check again
+        //            Twitter.sharedInstance().logIn { session, error in
+        //
+        //                print("In the block for the log in")
+        //                if session != nil { // Log in succeeded
+        //                    let composer = TWTRComposerViewController.emptyComposer()
+        //                    self.present(composer, animated: true, completion: nil)
+        //                } else {
+        //                    let alert = UIAlertController(title: "No Twitter Accounts Available", message: "You must log in before presenting a composer.", preferredStyle: .alert)
+        //                    self.present(alert, animated: false, completion: nil)
+        //                }
+        //            }
+        //        }
     }
 
     @IBAction func dismissView(_: UIButton)

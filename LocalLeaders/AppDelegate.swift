@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import TwitterKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate
@@ -19,6 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate
 
         // Request the MLA JSON from the server.
         LocalLeadersAPI.getMlasJSON()
+
+        // Set up Twitter
+        Twitter.sharedInstance().start(withConsumerKey: "", consumerSecret: "")
 
         // Let's set up the ThemeManager
         do {
