@@ -13,7 +13,7 @@ format:
 	swiftformat --disable braces LocalLeaders
 
 tailor:
-	tailor --config=.tailor.yml --min-name-length=5 | tee ~/Documents/MyProjects/iOS/LocalLeaders/TailorCharts/violations.json ; cd TailorCharts/ ; ./updateViolationsJson.py ; open index.html
+	tailor --config=.tailor.yml --min-name-length=5 | tee LocalLeaders/TailorCharts/violations.json ; cd TailorCharts/ ; ./updateViolationsJson.py ; open index.html
 
 # Dotty stuff
 clean:
