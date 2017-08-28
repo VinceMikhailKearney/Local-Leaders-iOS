@@ -8,6 +8,7 @@
 
 import UIKit
 import Social
+import MessageUI
 
 class ProfileViewController: BaseViewController
 {
@@ -21,6 +22,8 @@ class ProfileViewController: BaseViewController
     @IBOutlet weak var mlaName: UILabel!
     @IBOutlet weak var mlaConstituency: UILabel!
     @IBOutlet weak var mlaAboutTextView: UITextView!
+    @IBOutlet weak var emailButton: UIButton!
+    @IBOutlet weak var twitterButton: UIButton!
 
     override func viewDidLoad()
     {
@@ -37,6 +40,16 @@ class ProfileViewController: BaseViewController
         mlaParty.text = mla.partyAbbreviation.uppercased()
         mlaConstituency.text = "MLA - \(mla.constituency)"
         mlaAboutTextView.text = mlaAboutText()
+
+        emailButton.backgroundColor = ThemeManager.primary
+        emailButton.imageEdgeInsets = UIEdgeInsetsMake(10, 10, 10, 10)
+        emailButton.setImage(UIImage(named: "email"), for: .normal)
+        emailButton.layer.cornerRadius = 5
+
+        twitterButton.backgroundColor = ThemeManager.primary
+        twitterButton.imageEdgeInsets = UIEdgeInsetsMake(10, 10, 10, 10)
+        twitterButton.setImage(UIImage(named: "twitter"), for: .normal)
+        twitterButton.layer.cornerRadius = 5
     }
 
     private func setUpLabels()
@@ -70,19 +83,60 @@ class ProfileViewController: BaseViewController
             guard let sheet = tweetSheet else { return }
             present(sheet, animated: true, completion: nil)
         } else {
-            let hud = MBProgressHUD.showAdded(to: view, animated: true)
-            hud.mode = .text
-            hud.label.text = "No Twitter Account Found"
+            showToast(withText: "No Twitter Account Found")
+        }
+    }
 
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                MBProgressHUD.hide(for: self.view, animated: true)
-            }
+    @IBAction func emailUser(_: UIButton)
+    {
+        guard let mla = mla else {
+            showToast(withText: "Oops! Something went wrong!")
+            log.error("Somehow we were unable to get the MLA?")
+            return
+        }
+
+        let emailAddress = mla.emailAddress
+        guard emailAddress.characters.count > 0 else {
+            showToast(withText: "MLA does not have an E-mail address")
+            return
+        }
+
+        if MFMailComposeViewController.canSendMail() {
+            let mailComposer = MFMailComposeViewController()
+            mailComposer.mailComposeDelegate = self
+
+            mailComposer.setToRecipients([emailAddress])
+            mailComposer.setSubject("Local Leaders")
+            mailComposer.setMessageBody("Dear \(mla.firstname) \(mla.lastName)\n\n", isHTML: false)
+
+            present(mailComposer, animated: true, completion: nil)
+        } else {
+            showToast(withText: "No E-Mail Account Found")
         }
     }
 
     @IBAction func dismissView(_: UIButton)
     {
         dismiss(animated: true, completion: nil)
+    }
+
+    // MARK: Private Helpers
+    private func showToast(withText text: String)
+    {
+        let hud = MBProgressHUD.showAdded(to: view, animated: true)
+        hud.mode = .text
+        hud.label.text = text
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            MBProgressHUD.hide(for: self.view, animated: true)
+        }
+    }
+}
+
+extension ProfileViewController: MFMailComposeViewControllerDelegate
+{
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith _: MFMailComposeResult, error _: Error?) {
+        controller.dismiss(animated: true, completion: nil)
     }
 }
 

@@ -127,10 +127,11 @@
                                 <rect key="frame" x="16" y="217" width="343" height="250"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kcx-ZB-K4m">
-                                        <rect key="frame" x="141" y="182" width="60" height="60"/>
+                                        <rect key="frame" x="107.5" y="182" width="60" height="60"/>
+                                        <color key="backgroundColor" red="0.0" green="0.69019607839999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="60" id="Bj4-wJ-wgB"/>
-                                            <constraint firstAttribute="height" constant="60" id="ojZ-Z1-xjl"/>
+                                            <constraint firstAttribute="width" constant="60" id="F0q-m8-K9M"/>
+                                            <constraint firstAttribute="height" constant="60" id="HP7-C6-Vo3"/>
                                         </constraints>
                                         <state key="normal" image="twitter"/>
                                         <connections>
@@ -143,16 +144,29 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mC6-La-I1d">
+                                        <rect key="frame" x="175.5" y="182" width="60" height="60"/>
+                                        <color key="backgroundColor" red="0.0" green="0.69019607839999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" image="email"/>
+                                        <connections>
+                                            <action selector="emailUser:" destination="YvJ-sZ-X28" eventType="touchUpInside" id="lnT-tJ-DkI"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="kcx-ZB-K4m" firstAttribute="top" secondItem="4io-lj-PUd" secondAttribute="bottom" constant="8" id="1rX-tc-1na"/>
                                     <constraint firstItem="4io-lj-PUd" firstAttribute="leading" secondItem="5Yn-WU-01e" secondAttribute="leading" constant="8" id="7Yf-a0-zxL"/>
+                                    <constraint firstItem="kcx-ZB-K4m" firstAttribute="bottom" secondItem="mC6-La-I1d" secondAttribute="bottom" id="8Id-MM-bfn"/>
+                                    <constraint firstAttribute="bottom" secondItem="mC6-La-I1d" secondAttribute="bottom" constant="8" id="E15-UZ-rfR"/>
                                     <constraint firstAttribute="height" constant="250" id="Ia4-o6-Dz5"/>
-                                    <constraint firstItem="kcx-ZB-K4m" firstAttribute="top" secondItem="4io-lj-PUd" secondAttribute="bottom" constant="8" id="Rka-ck-2XN"/>
+                                    <constraint firstItem="kcx-ZB-K4m" firstAttribute="centerX" secondItem="5Yn-WU-01e" secondAttribute="centerX" constant="-34" id="TOS-P2-SKX"/>
+                                    <constraint firstItem="mC6-La-I1d" firstAttribute="leading" secondItem="kcx-ZB-K4m" secondAttribute="trailing" constant="8" id="VSf-Rl-JpM"/>
                                     <constraint firstAttribute="trailing" secondItem="4io-lj-PUd" secondAttribute="trailing" constant="8" id="Zv5-J4-LnS"/>
-                                    <constraint firstItem="kcx-ZB-K4m" firstAttribute="centerX" secondItem="5Yn-WU-01e" secondAttribute="centerX" id="kiJ-ho-hf0"/>
-                                    <constraint firstAttribute="bottom" secondItem="kcx-ZB-K4m" secondAttribute="bottom" constant="8" id="nik-Jc-wez"/>
+                                    <constraint firstItem="kcx-ZB-K4m" firstAttribute="centerX" secondItem="5Yn-WU-01e" secondAttribute="centerX" priority="900" id="ayF-Ch-Hoh"/>
+                                    <constraint firstItem="mC6-La-I1d" firstAttribute="height" secondItem="kcx-ZB-K4m" secondAttribute="height" id="ldz-ib-GZf"/>
                                     <constraint firstItem="4io-lj-PUd" firstAttribute="top" secondItem="5Yn-WU-01e" secondAttribute="top" constant="8" id="tBy-ia-d5w"/>
+                                    <constraint firstItem="mC6-La-I1d" firstAttribute="width" secondItem="kcx-ZB-K4m" secondAttribute="width" id="wZg-3a-LLa"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1H8-6V-Kh2">
@@ -232,11 +246,13 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="coverView" destination="1H8-6V-Kh2" id="shc-Mz-gKt"/>
+                        <outlet property="emailButton" destination="mC6-La-I1d" id="M8z-ge-Txf"/>
                         <outlet property="mlaAboutTextView" destination="4io-lj-PUd" id="CKI-Bn-eAH"/>
                         <outlet property="mlaConstituency" destination="G6x-Uf-oZZ" id="0fA-1x-0tq"/>
                         <outlet property="mlaName" destination="uwd-ch-Pjg" id="EOH-nD-SZg"/>
                         <outlet property="mlaParty" destination="hVV-Dz-J3t" id="rgN-gp-q5b"/>
                         <outlet property="profileImage" destination="1NY-Cj-JpL" id="lr3-JW-86c"/>
+                        <outlet property="twitterButton" destination="kcx-ZB-K4m" id="Hvt-kn-ssg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jNd-X9-9Wx" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -335,8 +351,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="email" width="64" height="64"/>
         <image name="leaderIcon" width="48" height="48"/>
         <image name="socialFeedIcon" width="48" height="48"/>
-        <image name="twitter" width="128" height="128"/>
+        <image name="twitter" width="64" height="64"/>
     </resources>
 </document>
