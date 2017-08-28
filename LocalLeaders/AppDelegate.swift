@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate
 
     func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplicationLaunchOptionsKey: Any]?) -> Bool
     {
+        // For use with simulator only
         let file = FileDestination()
         file.logFileURL = URL(fileURLWithPath: "/tmp/local_leaders.log")
         file.format = "$C$L$c $N.$F:$l - $M"
@@ -35,6 +36,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate
 
         // Request the MLA JSON from the server.
         LocalLeadersAPI.getMlasJSON()
+
+        Twitter.sharedInstance().start(withConsumerKey: "D6dr8He1ztQseUTrXzMsGD2KQ", consumerSecret: "zqkg21NgfxOttAPml8OJuv1op7dHZkq8TQXLJADuRb0HzVK7g3")
 
         // Let's set up the ThemeManager
         do {
