@@ -20,16 +20,21 @@ open class ParserUtils: NSObject
     static func getMlasFromArray(_ array: Array<AnyObject>)
     {
         for object in array {
-            if let leaderDictionary = object as? Dictionary<String, AnyObject> {
-                let newLeader = LeaderRecord.create(dictionary: leaderDictionary)
-                guard let leader = newLeader else { continue }
-                newLeader?.updateTwitterHandle(fetchTwitterHandleFor(first: leader.firstname, last: leader.lastName))
-                newLeader?.updateEmailAddress(fetchEmailFor(first: leader.firstname, last: leader.lastName))
-                newLeader?.save()
+            if let leaderDictionary = object as? [String: AnyObject] {
+                LeaderRecord.create(leaderDictionary)?.save()
             }
         }
 
-        log.debug(LeaderRecord.allObjects().count)
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "MLAsUpdated"), object: nil)
+    }
+
+    static func parseParties(array: Array<AnyObject>)
+    {
+        for object in array {
+            if let dictionary = object as? [String: AnyObject] {
+                PartyRecord.create(dictionary)?.save()
+            }
+        }
 
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "MLAsUpdated"), object: nil)
     }

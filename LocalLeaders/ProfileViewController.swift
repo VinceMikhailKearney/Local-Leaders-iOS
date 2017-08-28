@@ -56,10 +56,15 @@ class ProfileViewController: BaseViewController
 
     @IBAction func tweetUser(_: UIButton)
     {
+        guard var handle = mla?.twitterHandle else { return }
+        if handle.characters.count == 0 {
+            guard let party = PartyRecord.getParty(withName: mla?.partyAbbreviation.uppercased()) else { return }
+            handle = party.twitterHandle
+        }
+
         if SLComposeViewController.isAvailable(forServiceType: SLServiceTypeTwitter)
         {
-            guard var handle = mla?.twitterHandle else { return }
-            if !handle.hasPrefix("@") { handle.append("@") }
+            if !handle.hasPrefix("@") { handle = String(format: "%@%@", "@", handle) }
             let tweetSheet = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
             tweetSheet?.setInitialText("\(handle) #LocalLeaders ")
             guard let sheet = tweetSheet else { return }

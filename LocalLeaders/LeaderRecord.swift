@@ -29,7 +29,7 @@ open class LeaderRecord: BaseRealmObject
     }
 
     // MARK: Creating objects
-    static func create(dictionary: Dictionary<String, AnyObject>) -> LeaderRecord?
+    static func create(_ dictionary: [String: AnyObject]) -> LeaderRecord?
     {
         guard let keyInt = dictionary["key"] as? Int else { return nil }
         let key = String(keyInt)
@@ -63,20 +63,7 @@ open class LeaderRecord: BaseRealmObject
         return fetchedLeader!
     }
 
-    func updateTwitterHandle(_ handle: String)
-    {
-        try! BaseRealmObject.baseRealm().write({
-            self.twitterHandle = handle
-        })
-    }
-
-    func updateEmailAddress(_ email: String)
-    {
-        try! BaseRealmObject.baseRealm().write({
-            self.emailAddress = email
-        })
-    }
-
+    // Not yet used...
     static func fetchLeadersInConstituency(_ constituency: String) -> [LeaderRecord]
     {
         return Array(baseRealm().objects(try! realmType()).filter("constituency == %@", constituency)) as! Array<LeaderRecord>

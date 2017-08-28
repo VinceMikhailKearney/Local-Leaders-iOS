@@ -34,8 +34,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate
         // First thing we need to do if to check for any database migrations that might need performed.
         BaseRealmObject.checkForRealmMigration()
 
-        // Request the MLA JSON from the server.
         LocalLeadersAPI.getMlasJSON()
+        LocalLeadersAPI.getParties()
 
         Twitter.sharedInstance().start(withConsumerKey: "D6dr8He1ztQseUTrXzMsGD2KQ", consumerSecret: "zqkg21NgfxOttAPml8OJuv1op7dHZkq8TQXLJADuRb0HzVK7g3")
 

@@ -12,26 +12,33 @@ import RealmSwift
 open class PartyRecord: BaseRealmObject
 {
     // MARK: Leader object properties
-    dynamic var key: String?
-    dynamic var name: String?
-    dynamic var imageURL: String?
-    dynamic var twitterHandle: String?
+    dynamic var key: String = ""
+    dynamic var imageURL: String = ""
+    dynamic var twitterHandle: String = ""
 
     // MARK: Creating objects.
-    static func fetchOrCreate(dictionary: Dictionary<String, AnyObject>, key: String) -> PartyRecord
+    static func create(_ dictionary: [String: AnyObject]) -> PartyRecord?
     {
-        let fetchedParty: PartyRecord? = BaseRealmObject.baseRealm().objects(PartyRecord.self).filter("key = %@", key).first!
+        guard let nameKey = dictionary["name"] as? String else { return nil }
+        let fetchedParty = BaseRealmObject.baseRealm().objects(PartyRecord.self).filter("key == %@", nameKey).first
         if fetchedParty == nil
         {
             let newParty = PartyRecord()
-            newParty.key = key
-            newParty.name = dictionary["name"] as? String
-            newParty.imageURL = dictionary["image"] as? String
-            newParty.twitterHandle = dictionary["twitter"] as? String
+            newParty.key = nameKey
+            guard let imageUrl = dictionary["image_url"] as? String else { return nil }
+            newParty.imageURL = imageUrl
+            guard let twitterHandle = dictionary["twitter_handle"] as? String else { return nil }
+            newParty.twitterHandle = twitterHandle
             return newParty
         }
 
         return fetchedParty!
+    }
+
+    static func getParty(withName: String?) -> PartyRecord?
+    {
+        guard let withName = withName else { return nil }
+        return baseRealm().objects(try! realmType()).filter("key == %@", withName).first as? PartyRecord
     }
 
     // MARK: Overriding the realm type to return.
@@ -40,3 +47,4 @@ open class PartyRecord: BaseRealmObject
         return PartyRecord.self
     }
 }
+

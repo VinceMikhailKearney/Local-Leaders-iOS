@@ -10,6 +10,7 @@ import Foundation
 import Alamofire
 
 let GET_MLAS_JSON = "https://vincetestaccount.herokuapp.com/leaders/mlas/"
+let GET_PARTIES_JSON = "https://vincetestaccount.herokuapp.com/leaders/parties/"
 
 open class LocalLeadersAPI: NSObject
 {
@@ -18,6 +19,15 @@ open class LocalLeadersAPI: NSObject
         LocalLeadersAPI.get(GET_MLAS_JSON) { (result: Dictionary<String, AnyObject>?) in
             if let result = result, let response = result["response"] as? [AnyObject] {
                 ParserUtils.getMlasFromArray(response)
+            }
+        }
+    }
+
+    static func getParties()
+    {
+        LocalLeadersAPI.get(GET_PARTIES_JSON) { (result: Dictionary<String, AnyObject>?) in
+            if let result = result, let response = result["response"] as? [AnyObject] {
+                ParserUtils.parseParties(array: response)
             }
         }
     }
