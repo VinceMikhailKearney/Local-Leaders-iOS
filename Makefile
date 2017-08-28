@@ -15,6 +15,9 @@ format:
 tailor:
 	tailor --config=.tailor.yml --min-name-length=5 | tee LocalLeaders/TailorCharts/violations.json ; cd TailorCharts/ ; ./updateViolationsJson.py ; open index.html
 
+tail:
+	tail -f /tmp/local_leaders.log
+
 # Dotty stuff
 clean:
 	-rm -rf build
