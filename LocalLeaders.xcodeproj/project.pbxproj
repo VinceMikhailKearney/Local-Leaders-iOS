@@ -140,6 +140,7 @@
 		D8ADF4A61F4EE4A900F189E2 /* TwitterShareExtensionUIResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D8ADF4A21F4EE4A900F189E2 /* TwitterShareExtensionUIResources.bundle */; };
 		D8AE2E891DD3C57C006C2C47 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AE2E881DD3C57C006C2C47 /* BaseViewController.swift */; };
 		D8AE2E8C1DD3C691006C2C47 /* LocalLeadersAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AE2E8B1DD3C691006C2C47 /* LocalLeadersAPI.swift */; };
+		D8BB44071F54549800DF811C /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8BB44061F54549800DF811C /* Social.framework */; };
 		D8D0100D1DD397C2003432B6 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8D0100B1DD397C2003432B6 /* Realm.framework */; };
 		D8D0100E1DD397C2003432B6 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8D0100C1DD397C2003432B6 /* RealmSwift.framework */; };
 		D8D010111DD397DE003432B6 /* Realm.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D8D0100B1DD397C2003432B6 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -324,6 +325,7 @@
 		D8ADF4A21F4EE4A900F189E2 /* TwitterShareExtensionUIResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TwitterShareExtensionUIResources.bundle; sourceTree = "<group>"; };
 		D8AE2E881DD3C57C006C2C47 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		D8AE2E8B1DD3C691006C2C47 /* LocalLeadersAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalLeadersAPI.swift; sourceTree = "<group>"; };
+		D8BB44061F54549800DF811C /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		D8D0100B1DD397C2003432B6 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		D8D0100C1DD397C2003432B6 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		D8D010151DD3984F003432B6 /* BaseRealmObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRealmObject.swift; sourceTree = "<group>"; };
@@ -336,6 +338,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8BB44071F54549800DF811C /* Social.framework in Frameworks */,
 				D8ADF4A31F4EE4A900F189E2 /* TwitterCore.framework in Frameworks */,
 				D838CD2B1DD20F27002AE07B /* SwiftyJSON.framework in Frameworks */,
 				D838CD2E1DD211BC002AE07B /* Alamofire.framework in Frameworks */,
@@ -423,6 +426,7 @@
 		D838CD291DD20F27002AE07B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D8BB44061F54549800DF811C /* Social.framework */,
 				D8D0100B1DD397C2003432B6 /* Realm.framework */,
 				D8D0100C1DD397C2003432B6 /* RealmSwift.framework */,
 				D838CD2D1DD211BC002AE07B /* Alamofire.framework */,

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import TwitterKit
+import Social
 
 class ProfileViewController: BaseViewController
 {
@@ -56,19 +56,14 @@ class ProfileViewController: BaseViewController
 
     @IBAction func tweetUser(_: UIButton)
     {
-        // Swift
-        let composer = TWTRComposer()
-
-        composer.setText("just setting up my Twitter Kit")
-        composer.setImage(UIImage(named: "twitterkit"))
-
-        // Called from a UIViewController
-        composer.show(from: self) { result in
-            if result == .done {
-                print("Successfully composed Tweet")
-            } else {
-                print("Cancelled composing")
-            }
+        if SLComposeViewController.isAvailable(forServiceType: SLServiceTypeTwitter)
+        {
+            guard var handle = mla?.twitterHandle else { return }
+            if !handle.hasPrefix("@") { handle.append("@") }
+            let tweetSheet = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+            tweetSheet?.setInitialText("\(handle) #LocalLeaders ")
+            guard let sheet = tweetSheet else { return }
+            present(sheet, animated: true, completion: nil)
         }
     }
 

@@ -21,9 +21,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate
         // Request the MLA JSON from the server.
         LocalLeadersAPI.getMlasJSON()
 
-        // Set up Twitter
-        Twitter.sharedInstance().start(withConsumerKey: "D6dr8He1ztQseUTrXzMsGD2KQ", consumerSecret: "zqkg21NgfxOttAPml8OJuv1op7dHZkq8TQXLJADuRb0HzVK7g3")
-
         // Let's set up the ThemeManager
         do {
             try ThemeManager.initialise()
