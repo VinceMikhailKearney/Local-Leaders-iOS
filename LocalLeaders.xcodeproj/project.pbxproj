@@ -141,6 +141,9 @@
 		D8AE2E8C1DD3C691006C2C47 /* LocalLeadersAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AE2E8B1DD3C691006C2C47 /* LocalLeadersAPI.swift */; };
 		D8BB44071F54549800DF811C /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8BB44061F54549800DF811C /* Social.framework */; };
 		D8BB440F1F5478FB00DF811C /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = D8BB440E1F5478FB00DF811C /* MBProgressHUD.m */; };
+		D8BB44111F547E2E00DF811C /* SwiftyBeaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8BB44101F547E2E00DF811C /* SwiftyBeaver.framework */; };
+		D8BB44121F547E5E00DF811C /* SwiftyBeaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8BB44101F547E2E00DF811C /* SwiftyBeaver.framework */; };
+		D8BB44131F547E5E00DF811C /* SwiftyBeaver.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D8BB44101F547E2E00DF811C /* SwiftyBeaver.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D8D0100D1DD397C2003432B6 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8D0100B1DD397C2003432B6 /* Realm.framework */; };
 		D8D0100E1DD397C2003432B6 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8D0100C1DD397C2003432B6 /* RealmSwift.framework */; };
 		D8D010111DD397DE003432B6 /* Realm.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D8D0100B1DD397C2003432B6 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -176,6 +179,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				D8BB44131F547E5E00DF811C /* SwiftyBeaver.framework in CopyFiles */,
 				D8D010111DD397DE003432B6 /* Realm.framework in CopyFiles */,
 				D8D010121DD397DE003432B6 /* RealmSwift.framework in CopyFiles */,
 				D8D010131DD397DE003432B6 /* Alamofire.framework in CopyFiles */,
@@ -328,6 +332,7 @@
 		D8BB440C1F5478FB00DF811C /* LocalLeaders-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LocalLeaders-Bridging-Header.h"; sourceTree = "<group>"; };
 		D8BB440D1F5478FB00DF811C /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBProgressHUD.h; path = ../../Evy/Evy/MBProgressHUD.h; sourceTree = "<group>"; };
 		D8BB440E1F5478FB00DF811C /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBProgressHUD.m; path = ../../Evy/Evy/MBProgressHUD.m; sourceTree = "<group>"; };
+		D8BB44101F547E2E00DF811C /* SwiftyBeaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyBeaver.framework; path = Carthage/Build/iOS/SwiftyBeaver.framework; sourceTree = "<group>"; };
 		D8D0100B1DD397C2003432B6 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		D8D0100C1DD397C2003432B6 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		D8D010151DD3984F003432B6 /* BaseRealmObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRealmObject.swift; sourceTree = "<group>"; };
@@ -344,7 +349,9 @@
 				D8ADF4A31F4EE4A900F189E2 /* TwitterCore.framework in Frameworks */,
 				D838CD2B1DD20F27002AE07B /* SwiftyJSON.framework in Frameworks */,
 				D838CD2E1DD211BC002AE07B /* Alamofire.framework in Frameworks */,
+				D8BB44121F547E5E00DF811C /* SwiftyBeaver.framework in Frameworks */,
 				D8D0100D1DD397C2003432B6 /* Realm.framework in Frameworks */,
+				D8BB44111F547E2E00DF811C /* SwiftyBeaver.framework in Frameworks */,
 				D8D0100E1DD397C2003432B6 /* RealmSwift.framework in Frameworks */,
 				D8ADF4A41F4EE4A900F189E2 /* TwitterKit.framework in Frameworks */,
 			);
@@ -431,6 +438,7 @@
 		D838CD291DD20F27002AE07B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D8BB44101F547E2E00DF811C /* SwiftyBeaver.framework */,
 				D8BB44061F54549800DF811C /* Social.framework */,
 				D8D0100B1DD397C2003432B6 /* Realm.framework */,
 				D8D0100C1DD397C2003432B6 /* RealmSwift.framework */,
