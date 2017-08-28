@@ -4,6 +4,8 @@ exclude:
   - '**Tests.swift'
   - Carthage
   - Makefile
+  - Twitter-Kit-iOS
+  - TailorCharts
 
 except:
   - brace-style
