@@ -16,8 +16,8 @@ class SocialViewController: TWTRTimelineViewController
         super.viewDidLoad()
         dataSource = TWTRUserTimelineDataSource(screenName: "vmjkearney", apiClient: TWTRAPIClient())
         showTweetActions = true
-        navigationController?.navigationBar.barTintColor = ThemeManager.getColor(ThemeManager.PRIMARY)
-        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: ThemeManager.getColor(ThemeManager.TITLE_COLOR)!]
+        navigationController?.navigationBar.barTintColor = ThemeManager.primary
+        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: ThemeManager.titleColor]
         navigationItem.title = "Social"
     }
 

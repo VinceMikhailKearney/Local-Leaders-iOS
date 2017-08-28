@@ -22,7 +22,7 @@ class LeadersViewController: BaseViewController
         leaders = LeaderRecord.allObjects() as? [LeaderRecord]
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.backgroundColor = UIColor.white
+        tableView.backgroundColor = .white
         navigationItem.title = "MLAs"
     }
 

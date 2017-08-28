@@ -18,11 +18,11 @@ open class ThemeManager: NSObject
 {
     // MARK: Properties
     static var themeColors: Dictionary<String, String>?
-    static let BLUE: String = "BLUE"
-    static let PINK: String = "PINK"
-    static let PRIMARY: String = "PRIMARY"
-    static let MAIN_TEXT_COLOR: String = "MAIN_TEXT_COLOR"
-    static let TITLE_COLOR: String = "TITLE_COLOR"
+    open class var blue: UIColor { return getColor("BLUE") }
+    open class var pink: UIColor { return getColor("PINK") }
+    open class var primary: UIColor { return getColor("PRIMARY") }
+    open class var mainText: UIColor { return getColor("MAIN_TEXT_COLOR") }
+    open class var titleColor: UIColor { return getColor("TITLE_COLOR") }
 
     static func initialise() throws
     {
@@ -33,8 +33,10 @@ open class ThemeManager: NSObject
         }
     }
 
-    static func getColor(_ color: String) -> UIColor?
+    static func getColor(_ colorName: String) -> UIColor
     {
-        return UIColor(hexString: (themeColors?[color]!)!)
+        guard let color = UIColor(hexString: (themeColors?[colorName])) else { return .black }
+        return color
     }
 }
+

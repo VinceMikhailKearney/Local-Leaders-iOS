@@ -19,10 +19,10 @@ class LeaderCell: UITableViewCell
     {
         super.awakeFromNib()
 
-        backgroundColor = UIColor.clear
-        leaderFullName.textColor = UIColor.black
-        leaderPartyName.textColor = ThemeManager.getColor(ThemeManager.PINK)
-        leaderConstituency.textColor = UIColor.gray
+        backgroundColor = .clear
+        leaderFullName.textColor = .black
+        leaderPartyName.textColor = ThemeManager.pink
+        leaderConstituency.textColor = .gray
 
         leaderImage.layer.cornerRadius = 40
         leaderImage.layer.masksToBounds = true

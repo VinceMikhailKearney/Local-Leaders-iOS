@@ -25,7 +25,7 @@ class ProfileViewController: BaseViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        coverView.backgroundColor = ThemeManager.getColor(ThemeManager.PRIMARY)
+        coverView.backgroundColor = ThemeManager.primary
 
         guard let mla = mla else { return }
         profileImage.layer.cornerRadius = 50
@@ -42,7 +42,7 @@ class ProfileViewController: BaseViewController
     private func setUpLabels()
     {
         mlaName.textColor = .white
-        mlaParty.textColor = ThemeManager.getColor(ThemeManager.PINK)
+        mlaParty.textColor = ThemeManager.pink
         mlaConstituency.textColor = .white
         mlaAboutTextView.textColor = .black
         mlaAboutTextView.isEditable = false

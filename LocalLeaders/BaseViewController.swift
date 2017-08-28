@@ -14,10 +14,11 @@ class BaseViewController: UIViewController
     {
         super.viewDidLoad()
 
-        navigationController?.navigationBar.barTintColor = ThemeManager.getColor(ThemeManager.PRIMARY)
-        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: ThemeManager.getColor(ThemeManager.TITLE_COLOR)!]
+        navigationController?.navigationBar.barTintColor = ThemeManager.primary
+        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: ThemeManager.titleColor]
 
-        tabBarController?.tabBar.barTintColor = ThemeManager.getColor(ThemeManager.PRIMARY)
-        tabBarController?.tabBar.tintColor = ThemeManager.getColor(ThemeManager.TITLE_COLOR)
+        tabBarController?.tabBar.barTintColor = ThemeManager.primary
+        tabBarController?.tabBar.tintColor = ThemeManager.titleColor
     }
 }
+

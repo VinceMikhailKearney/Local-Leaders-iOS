@@ -11,8 +11,10 @@ import UIKit
 
 extension UIColor
 {
-    public convenience init?(hexString: String)
+    public convenience init?(hexString: String?)
     {
+        guard let hexString = hexString else { return nil }
+
         let r, g, b, a: CGFloat
         // Let's make sure that we are passing in a Hex string first
         if hexString.hasPrefix("0x")
@@ -42,3 +44,4 @@ extension UIColor
         return nil
     }
 }
+
