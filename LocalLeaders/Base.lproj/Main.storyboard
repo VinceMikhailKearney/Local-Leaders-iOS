@@ -282,9 +282,7 @@
         <scene sceneID="Joc-oK-1L3">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bAk-5X-tHv" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="MLAs" image="leaderIcon" id="acW-dT-cKf">
-                        <inset key="imageInsets" minX="5" minY="5" maxX="5" maxY="5"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="MLAs" image="leaderIcon" id="acW-dT-cKf"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="W4S-iI-T4o">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -303,9 +301,7 @@
         <scene sceneID="kxi-w7-Xfa">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zK9-Bd-fu9" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Social" image="socialFeedIcon" selectedImage="socialFeedIcon" id="cPa-gy-q4n">
-                        <inset key="imageInsets" minX="5" minY="6" maxX="5" maxY="5"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Social" image="twitter" id="cPa-gy-q4n"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Rrm-Qg-kxf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -353,7 +349,6 @@
     <resources>
         <image name="email" width="64" height="64"/>
         <image name="leaderIcon" width="48" height="48"/>
-        <image name="socialFeedIcon" width="48" height="48"/>
         <image name="twitter" width="64" height="64"/>
     </resources>
 </document>
