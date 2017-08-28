@@ -2,10 +2,10 @@ include:
   - LocalLeaders
 exclude:
   - '**Tests.swift'
-  - Carthage
+  - /Carthage
   - Makefile
-  - Twitter-Kit-iOS
-  - TailorCharts
+  - /Twitter-Kit-iOS
+  - /TailorCharts
 
 except:
   - brace-style

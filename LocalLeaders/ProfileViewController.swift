@@ -56,24 +56,20 @@ class ProfileViewController: BaseViewController
 
     @IBAction func tweetUser(_: UIButton)
     {
-        //        if (Twitter.sharedInstance().sessionStore.hasLoggedInUsers()) {
-        //            // App must have at least one logged-in user to compose a Tweet
-        //            let composer = TWTRComposerViewController.emptyComposer()
-        //            present(composer, animated: true, completion: nil)
-        //        } else {
-        //            // Log in, and then check again
-        //            Twitter.sharedInstance().logIn { session, error in
-        //
-        //                print("In the block for the log in")
-        //                if session != nil { // Log in succeeded
-        //                    let composer = TWTRComposerViewController.emptyComposer()
-        //                    self.present(composer, animated: true, completion: nil)
-        //                } else {
-        //                    let alert = UIAlertController(title: "No Twitter Accounts Available", message: "You must log in before presenting a composer.", preferredStyle: .alert)
-        //                    self.present(alert, animated: false, completion: nil)
-        //                }
-        //            }
-        //        }
+        // Swift
+        let composer = TWTRComposer()
+
+        composer.setText("just setting up my Twitter Kit")
+        composer.setImage(UIImage(named: "twitterkit"))
+
+        // Called from a UIViewController
+        composer.show(from: self) { result in
+            if result == .done {
+                print("Successfully composed Tweet")
+            } else {
+                print("Cancelled composing")
+            }
+        }
     }
 
     @IBAction func dismissView(_: UIButton)
