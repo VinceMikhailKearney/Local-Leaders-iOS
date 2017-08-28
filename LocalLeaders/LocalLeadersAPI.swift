@@ -16,10 +16,8 @@ open class LocalLeadersAPI: NSObject
     static func getMlasJSON()
     {
         LocalLeadersAPI.get(GET_MLAS_JSON) { (result: Dictionary<String, AnyObject>?) in
-            DispatchQueue.global().async {
-                if let result = result, let response = result["response"] as? [AnyObject] {
-                    ParserUtils.getMlasFromArray(response)
-                }
+            if let result = result, let response = result["response"] as? [AnyObject] {
+                ParserUtils.getMlasFromArray(response)
             }
         }
     }

@@ -19,11 +19,20 @@ class LeadersViewController: BaseViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        leaders = LeaderRecord.allObjects() as? [LeaderRecord]
+
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadTable), name: NSNotification.Name(rawValue: "MLAsUpdated"), object: nil)
+
         tableView.delegate = self
         tableView.dataSource = self
         tableView.backgroundColor = .white
         navigationItem.title = "MLAs"
+
+        reloadTable()
+    }
+
+    func reloadTable() {
+        leaders = LeaderRecord.allObjects() as? [LeaderRecord]
+        tableView.reloadData()
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

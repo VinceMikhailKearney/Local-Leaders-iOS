@@ -30,6 +30,8 @@ open class ParserUtils: NSObject
         }
 
         log.debug(LeaderRecord.allObjects().count)
+
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "MLAsUpdated"), object: nil)
     }
 
     static func fetchTwitterHandleFor(first: String, last: String) -> String
