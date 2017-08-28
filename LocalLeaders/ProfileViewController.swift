@@ -64,6 +64,14 @@ class ProfileViewController: BaseViewController
             tweetSheet?.setInitialText("\(handle) #LocalLeaders ")
             guard let sheet = tweetSheet else { return }
             present(sheet, animated: true, completion: nil)
+        } else {
+            let hud = MBProgressHUD.showAdded(to: view, animated: true)
+            hud.mode = .text
+            hud.label.text = "No Twitter Account Found"
+
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                MBProgressHUD.hide(for: self.view, animated: true)
+            }
         }
     }
 

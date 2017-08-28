@@ -29,7 +29,7 @@ open class ParserUtils: NSObject
             }
         }
 
-        print(LeaderRecord.allObjects().count)
+        log.debug(LeaderRecord.allObjects().count)
     }
 
     static func fetchTwitterHandleFor(first: String, last: String) -> String
@@ -52,7 +52,7 @@ open class ParserUtils: NSObject
             do {
                 fileObject = try String(contentsOfFile: filePath)
             } catch {
-                print("Unable to load csv file from path: \(filePath)")
+                log.error("Unable to load csv file from path: \(filePath)")
             }
 
             var fileObjectCleaned = fileObject!.replacingOccurrences(of: "\r", with: "\n")
@@ -67,7 +67,7 @@ open class ParserUtils: NSObject
                 }
             }
         } else {
-            print("Unable to get path to csv file.")
+            log.error("Unable to get path to csv file.")
         }
 
         return result

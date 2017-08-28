@@ -20,10 +20,5 @@ class SocialViewController: TWTRTimelineViewController
         navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: ThemeManager.titleColor]
         navigationItem.title = "Social"
     }
-
-    override func viewWillAppear(_ animated: Bool)
-    {
-        super.viewWillAppear(animated)
-    }
 }
 

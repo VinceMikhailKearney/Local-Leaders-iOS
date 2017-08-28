@@ -7,14 +7,29 @@
 //
 
 import UIKit
+import SwiftyBeaver
 import TwitterKit
+
+let log = SwiftyBeaver.self
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate
 {
     var window: UIWindow?
 
-    func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplicationLaunchOptionsKey: Any]?) -> Bool
+    {
+        let file = FileDestination()
+        file.logFileURL = URL(fileURLWithPath: "/tmp/local_leaders.log")
+        file.format = "$C$L$c $N.$F:$l - $M"
+        log.addDestination(file)
+
+        let console = ConsoleDestination()
+        console.format = "$C$L$c $N.$F:$l - $M"
+        log.addDestination(console)
+
+        log.debug("didFinishLaunchingWithOptions")
+
         // First thing we need to do if to check for any database migrations that might need performed.
         BaseRealmObject.checkForRealmMigration()
 
@@ -25,9 +40,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate
         do {
             try ThemeManager.initialise()
         } catch themeError.themeFileNotFound {
-            print("Seem's we did not find the ThemeManager plist")
+            log.error("Seem's we did not find the ThemeManager plist")
         } catch {
-            print("Some other error was thrown")
+            log.error("Some other error was thrown")
         }
 
         UIView.appearance(whenContainedInInstancesOf: [UITabBar.self]).tintColor = UIColor(white: 1.0, alpha: 0.3)

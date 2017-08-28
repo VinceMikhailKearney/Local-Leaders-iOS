@@ -19,7 +19,6 @@
 		D84260C21DDCDECF00ACB2E3 /* Colours.plist in Resources */ = {isa = PBXBuildFile; fileRef = D84260C11DDCDECF00ACB2E3 /* Colours.plist */; };
 		D84260C41DDCDF2D00ACB2E3 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84260C31DDCDF2D00ACB2E3 /* ThemeManager.swift */; };
 		D84260C61DDCE6D700ACB2E3 /* UIColorUitls.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84260C51DDCE6D700ACB2E3 /* UIColorUitls.swift */; };
-		D84260C81DDCF55400ACB2E3 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84260C71DDCF55400ACB2E3 /* TabBarController.swift */; };
 		D84689471DD212E4004C7600 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D84689451DD212E4004C7600 /* Assets.xcassets */; };
 		D84689B51DD21339004C7600 /* mla_with_id__104.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D84689491DD21339004C7600 /* mla_with_id__104.jpg */; };
 		D84689B61DD21339004C7600 /* mla_with_id__105.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D846894A1DD21339004C7600 /* mla_with_id__105.jpg */; };
@@ -141,6 +140,7 @@
 		D8AE2E891DD3C57C006C2C47 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AE2E881DD3C57C006C2C47 /* BaseViewController.swift */; };
 		D8AE2E8C1DD3C691006C2C47 /* LocalLeadersAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AE2E8B1DD3C691006C2C47 /* LocalLeadersAPI.swift */; };
 		D8BB44071F54549800DF811C /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8BB44061F54549800DF811C /* Social.framework */; };
+		D8BB440F1F5478FB00DF811C /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = D8BB440E1F5478FB00DF811C /* MBProgressHUD.m */; };
 		D8D0100D1DD397C2003432B6 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8D0100B1DD397C2003432B6 /* Realm.framework */; };
 		D8D0100E1DD397C2003432B6 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8D0100C1DD397C2003432B6 /* RealmSwift.framework */; };
 		D8D010111DD397DE003432B6 /* Realm.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D8D0100B1DD397C2003432B6 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -204,7 +204,6 @@
 		D84260C11DDCDECF00ACB2E3 /* Colours.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Colours.plist; sourceTree = "<group>"; };
 		D84260C31DDCDF2D00ACB2E3 /* ThemeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 		D84260C51DDCE6D700ACB2E3 /* UIColorUitls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorUitls.swift; sourceTree = "<group>"; };
-		D84260C71DDCF55400ACB2E3 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		D84689451DD212E4004C7600 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D84689491DD21339004C7600 /* mla_with_id__104.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mla_with_id__104.jpg; sourceTree = "<group>"; };
 		D846894A1DD21339004C7600 /* mla_with_id__105.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mla_with_id__105.jpg; sourceTree = "<group>"; };
@@ -326,6 +325,9 @@
 		D8AE2E881DD3C57C006C2C47 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		D8AE2E8B1DD3C691006C2C47 /* LocalLeadersAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalLeadersAPI.swift; sourceTree = "<group>"; };
 		D8BB44061F54549800DF811C /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		D8BB440C1F5478FB00DF811C /* LocalLeaders-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LocalLeaders-Bridging-Header.h"; sourceTree = "<group>"; };
+		D8BB440D1F5478FB00DF811C /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBProgressHUD.h; path = ../../Evy/Evy/MBProgressHUD.h; sourceTree = "<group>"; };
+		D8BB440E1F5478FB00DF811C /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBProgressHUD.m; path = ../../Evy/Evy/MBProgressHUD.m; sourceTree = "<group>"; };
 		D8D0100B1DD397C2003432B6 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		D8D0100C1DD397C2003432B6 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		D8D010151DD3984F003432B6 /* BaseRealmObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRealmObject.swift; sourceTree = "<group>"; };
@@ -390,6 +392,8 @@
 		D838CCF81DD20CF1002AE07B /* LocalLeaders */ = {
 			isa = PBXGroup;
 			children = (
+				D8BB440D1F5478FB00DF811C /* MBProgressHUD.h */,
+				D8BB440E1F5478FB00DF811C /* MBProgressHUD.m */,
 				D84689441DD212E4004C7600 /* Assets */,
 				D8D010191DD398AE003432B6 /* RealmDatabase */,
 				D8AE2E871DD3C557006C2C47 /* ViewControllers */,
@@ -401,6 +405,7 @@
 				D84260C51DDCE6D700ACB2E3 /* UIColorUitls.swift */,
 				D8ADF49C1F4E3EE600F189E2 /* Utils.swift */,
 				D838CD071DD20CF1002AE07B /* Info.plist */,
+				D8BB440C1F5478FB00DF811C /* LocalLeaders-Bridging-Header.h */,
 			);
 			path = LocalLeaders;
 			sourceTree = "<group>";
@@ -580,7 +585,6 @@
 				D838CCFB1DD20CF1002AE07B /* LeadersViewController.swift */,
 				D8ADF4981F4E380500F189E2 /* ProfileViewController.swift */,
 				D838CCFD1DD20CF1002AE07B /* SocialViewController.swift */,
-				D84260C71DDCF55400ACB2E3 /* TabBarController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -684,6 +688,7 @@
 					D838CCF51DD20CF1002AE07B = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 6HZFYV4ZLM;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					D838CD0B1DD20CF1002AE07B = {
@@ -898,7 +903,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8D010181DD398A9003432B6 /* LeaderRecord.swift in Sources */,
-				D84260C81DDCF55400ACB2E3 /* TabBarController.swift in Sources */,
 				D838CCFE1DD20CF1002AE07B /* SocialViewController.swift in Sources */,
 				D838CCFA1DD20CF1002AE07B /* AppDelegate.swift in Sources */,
 				D8ADF4991F4E380500F189E2 /* ProfileViewController.swift in Sources */,
@@ -912,6 +916,7 @@
 				D8520FE81DD3FCE60083B056 /* ParserUtils.swift in Sources */,
 				D84260C41DDCDF2D00ACB2E3 /* ThemeManager.swift in Sources */,
 				D84260C61DDCE6D700ACB2E3 /* UIColorUitls.swift in Sources */,
+				D8BB440F1F5478FB00DF811C /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1061,6 +1066,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 6HZFYV4ZLM;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1071,6 +1077,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vince.localleaders;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LocalLeaders/LocalLeaders-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -1079,6 +1087,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 6HZFYV4ZLM;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1089,6 +1098,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vince.localleaders;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LocalLeaders/LocalLeaders-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

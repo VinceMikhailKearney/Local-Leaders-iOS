@@ -31,15 +31,15 @@ open class LocalLeadersAPI: NSObject
                 switch response.result
                 {
                 case .success:
-                    print("Successful GET request")
-                    if let JSON = response.result.value {
-                        completion(JSON as? Dictionary<String, AnyObject>)
+                    log.debug("Successful GET request")
+                    if let JSON = response.result.value as? [String: AnyObject] {
+                        completion(JSON)
                     }
                     break
 
                 case let .failure(error):
-                    print("GET request failed")
-                    print(error)
+                    log.error("GET request failed")
+                    log.error(error)
                     break
                 }
             }
