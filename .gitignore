@@ -5,3 +5,7 @@ xcshareddata
 build/
 .idea/
 DerivedData/
+
+# Personal Settings
+
+TailorCharts/
