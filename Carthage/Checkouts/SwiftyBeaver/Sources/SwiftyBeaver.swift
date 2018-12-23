@@ -12,9 +12,9 @@ import Foundation
 open class SwiftyBeaver {
 
     /// version string of framework
-    public static let version = "1.4.0" // UPDATE ON RELEASE!
+    public static let version = "1.6.1"  // UPDATE ON RELEASE!
     /// build number of framework
-    public static let build = 1400 // version 0.7.1 -> 710, UPDATE ON RELEASE!
+    public static let build = 1610 // version 0.7.1 -> 710, UPDATE ON RELEASE!
 
     public enum Level: Int {
         case verbose = 0
@@ -25,7 +25,7 @@ open class SwiftyBeaver {
     }
 
     // a set of active destinations
-    open private(set) static var destinations = Set<BaseDestination>()
+    public private(set) static var destinations = Set<BaseDestination>()
 
     // MARK: Destination Handling
 
@@ -122,7 +122,7 @@ open class SwiftyBeaver {
 
     /// internal helper which dispatches send to dedicated queue if minLevel is ok
     class func dispatch_send(level: SwiftyBeaver.Level, message: @autoclosure () -> Any,
-                             thread: String, file: String, function: String, line: Int, context: Any?) {
+        thread: String, file: String, function: String, line: Int, context: Any?) {
         var resolvedMessage: String?
         for dest in destinations {
 
@@ -156,21 +156,21 @@ open class SwiftyBeaver {
 
      - returns: true if all messages flushed, false if timeout or error occurred
      */
-    public class func flush(secondTimeout _: Int64) -> Bool {
+    public class func flush(secondTimeout: Int64) -> Bool {
 
         /*
-         guard let grp = dispatch_group_create() else { return false }
-         for dest in destinations {
-         if let queue = dest.queue {
-         dispatch_group_enter(grp)
-         queue.asynchronously(execute: {
-         dest.flush()
-         grp.leave()
-         })
-         }
-         }
-         let waitUntil = DispatchTime.now(dispatch_time_t(DISPATCH_TIME_NOW), secondTimeout * 1000000000)
-         return dispatch_group_wait(grp, waitUntil) == 0
+        guard let grp = dispatch_group_create() else { return false }
+        for dest in destinations {
+            if let queue = dest.queue {
+                dispatch_group_enter(grp)
+                queue.asynchronously(execute: {
+                    dest.flush()
+                    grp.leave()
+                })
+            }
+        }
+        let waitUntil = DispatchTime.now(dispatch_time_t(DISPATCH_TIME_NOW), secondTimeout * 1000000000)
+        return dispatch_group_wait(grp, waitUntil) == 0
          */
         return true
     }
@@ -178,15 +178,14 @@ open class SwiftyBeaver {
     /// removes the parameters from a function because it looks weird with a single param
     class func stripParams(function: String) -> String {
         var f = function
-        if let indexOfBrace = f.characters.index(of: "(") {
+        if let indexOfBrace = f.find("(") {
             #if swift(>=4.0)
-                f = String(f[..<indexOfBrace])
+            f = String(f[..<indexOfBrace])
             #else
-                f = f.substring(to: indexOfBrace)
+            f = f.substring(to: indexOfBrace)
             #endif
         }
         f += "()"
         return f
     }
 }
-

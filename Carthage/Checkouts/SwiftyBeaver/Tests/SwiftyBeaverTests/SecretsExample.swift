@@ -9,15 +9,15 @@
 import Foundation
 
 /*
- WARNING:
- ========
+    WARNING:
+    ========
 
- Never put this file with values under source control!
+    Never put this file with values under source control!
 
- Instead copy & rename this file to Secrets.swift (!!!), uncomment the Secrets struct
- and add your credentials there. Secrets.swift is excluded from Git via .gitignore and can contain secrets.
+    Instead copy & rename this file to Secrets.swift (!!!), uncomment the Secrets struct
+    and add your credentials there. Secrets.swift is excluded from Git via .gitignore and can contain secrets.
 
- */
+*/
 
 struct Secrets {
 
@@ -27,4 +27,3 @@ struct Secrets {
         static let encryptionKey = ""
     }
 }
-

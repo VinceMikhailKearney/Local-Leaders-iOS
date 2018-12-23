@@ -6,13 +6,103 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ----
 <br/>
 
+## 1.6.1 (2018-09-18)
+
+##### Added
+
+- Optional sync after each file write by [@crspybits ](https://github.com/crspybits)
+- Execute methods to run in dest queue by [@keeshux ](https://github.com/keeshux)
+- Padded format option (see [PR for details](https://github.com/SwiftyBeaver/SwiftyBeaver/pull/298)) by [@htb ](https://github.com/htb)
+
+
+##### Fixed
+- Warning caused by iOS 12 by [@lgaches](https://github.com/lgaches)
+- Issues with formating by [@htb ](https://github.com/htb)
+
+<br/>
+
+## 1.6.0 (2018-05-23)
+
+##### Added
+
+- Custom filters by [@Mordil ](https://github.com/Mordil )
+- App uptime format variable `$U` by [@LordNali ](https://github.com/LordNali )
+
+##### Changed
+- Filter behavior which requires now at least one passing non-required filter by [@cconway](https://github.com/cconway)
+
+<br/>
+
+## 1.5.2 (2018-04-05)
+
+##### Added
+
+- Support for Xcode 9.3 and Swift 4.1 by [@jimmya](https://github.com/jimmya)
+
+<br/>
+
+## 1.5.1 (2018-01-05)
+
+##### Added
+
+- Integration test for context format variable `$X` by [@skreutzberger](https://github.com/skreutzberger)
+- Logging output string is trimmed by [@skreutzberger](https://github.com/skreutzberger)
+
+##### Fixed
+
+- Fixed issue with Xcode and folder name on case-sensitive file systems by [@konstantinbe](https://github.com/konstantinbe)
+
+
+<br/>
+
+## 1.5.0 (2017-12-13)
+
+##### Added
+
+- Cross-compatibility for Swift 3.1, 3.2 & 4 by [@skreutzberger](https://github.com/skreutzberger)
+
+<br/>
+
+## 1.4.4 (2017-12-08)
+
+##### Added
+
+- Set a custom server URL already on platform destination init by [@skreutzberger](https://github.com/skreutzberger)
+
+<br/>
+
+## 1.4.3 (2017-11-09)
+
+##### Added
+
+- Support for latest Xcode 9.1 by removing deprecation warning by [@tomekh7](https://github.com/tomekh7)
+- Reduced the overall size of the framework by [@NachoSoto](https://github.com/NachoSoto)
+- Improved support for Swift 4 via SPM by [@lgaches](https://github.com/lgaches)
+
+<br/>
+
+## 1.4.2 (2017-09-26)
+
+##### Fixed
+
+- Fixed memory leak in SBPlatformDestination by [@drougojrom](https://github.com/drougojrom)
+
+<br/>
+
+## 1.4.1 (2017-09-18)
+
+##### Fixed
+
+- Disabled code coverage to fix app submission with Xcode 9 by [@NachoSoto](https://github.com/NachoSoto)
+
+<br/>
+
 ## 1.4.0 (2017-08-12)
 
 ##### Added
 
 - Support for latest Xcode 9 beta, Swift 3.2 & Swift 4 by [@lgaches](https://github.com/lgaches)
 - Less aggressive file protection type when logfile is created by [@igorefremov](https://github.com/igorefremov)
-
 
 <br/>
 

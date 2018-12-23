@@ -29,7 +29,7 @@ class GoogleCloudDestinationTests: XCTestCase {
 
     func testSend() {
         // let dateStr = formatter.stringFromDate(NSDate())
-        // let platform = SBPlatformDestination()
+        //let platform = SBPlatformDestination()
         let msg = "test message\nNewlineäößø"
         let thread = ""
         let file = "/file/path.swift"
@@ -40,8 +40,8 @@ class GoogleCloudDestinationTests: XCTestCase {
         let str = gcpDestination.send(.verbose, msg: msg, thread: thread, file: file, function: function, line: line)
         XCTAssertNotNil(str)
         if let str = str {
-            XCTAssertEqual(str.characters.first, "{")
-            XCTAssertEqual(str.characters.last, "}")
+            XCTAssertEqual(str.firstChar, "{")
+            XCTAssertEqual(str.lastChar, "}")
             XCTAssertNotNil(str.range(of: "{\"service\":\"TEST\"}"))
             XCTAssertNotNil(str.range(of: "\"severity\":\"DEBUG\""))
             XCTAssertNotNil(str.range(of: "\"message\":\"test message\\nNewlineäößø\""))
@@ -59,12 +59,12 @@ class GoogleCloudDestinationTests: XCTestCase {
         let gcd = GoogleCloudDestination(serviceName: "SwiftyBeaver")
 
         let str = gcd.send(.verbose, msg: msg, thread: thread, file: file, function: function, line: line,
-                           context: ["user": "Beaver", "httpRequest": ["method": "GET", "responseStatusCode": 200]])
+                           context:  ["user": "Beaver", "httpRequest": ["method": "GET", "responseStatusCode": 200]])
 
         XCTAssertNotNil(str)
         if let str = str {
-            XCTAssertEqual(str.characters.first, "{")
-            XCTAssertEqual(str.characters.last, "}")
+            XCTAssertEqual(str.firstChar, "{")
+            XCTAssertEqual(str.lastChar, "}")
             XCTAssertNotNil(str.range(of: "{\"service\":\"SwiftyBeaver\"}"))
             XCTAssertNotNil(str.range(of: "\"severity\":\"DEBUG\""))
             XCTAssertNotNil(str.range(of: "\"message\":\"test message\\nNewlineäößø\""))
@@ -73,12 +73,13 @@ class GoogleCloudDestinationTests: XCTestCase {
             XCTAssertNotNil(str.range(of: "\"method\":\"GET\""))
             XCTAssertNotNil(str.range(of: "\"responseStatusCode\":200"))
         }
+
     }
 
     static var allTests = [
         ("testUseGoogleCloudPDestination", testUseGoogleCloudPDestination),
         ("testSend", testSend),
-        ("testContextMessage", testContextMessage),
+        ("testContextMessage", testContextMessage)
     ]
-}
 
+}

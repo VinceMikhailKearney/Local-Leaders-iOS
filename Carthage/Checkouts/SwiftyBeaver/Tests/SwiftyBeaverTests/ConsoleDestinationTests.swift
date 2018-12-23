@@ -37,7 +37,7 @@ class ConsoleDestinationTests: XCTestCase {
         // switch to terminal colors
         console.useTerminalColors = true
         XCTAssertTrue(console.useTerminalColors)
-        XCTAssertEqual(console.levelColor.verbose, "251m")
+        XCTAssertEqual(console.levelColor.verbose, "251m" )
         XCTAssertEqual(console.reset, "\u{001b}[0m")
         XCTAssertEqual(console.escape, "\u{001b}[38;5;")
     }
@@ -45,7 +45,6 @@ class ConsoleDestinationTests: XCTestCase {
     // MARK: Linux allTests
 
     static let allTests = [
-        ("testUseTerminalColors", testUseTerminalColors),
+        ("testUseTerminalColors", testUseTerminalColors)
     ]
 }
-

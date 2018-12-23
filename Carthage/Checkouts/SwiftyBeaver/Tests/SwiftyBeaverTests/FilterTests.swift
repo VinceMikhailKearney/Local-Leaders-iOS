@@ -16,7 +16,7 @@ class FilterTests: XCTestCase {
         let filter = Filters.Path.startsWith("/some/path")
         let isCorrectTargetType: Bool
         switch filter.getTarget() {
-        case .Path:
+        case .Path(_):
             isCorrectTargetType = true
 
         default:
@@ -284,6 +284,31 @@ class FilterTests: XCTestCase {
         XCTAssertFalse(filter.apply("/first/path/to/anywhere"))
     }
 
+    func test_pathCustomSimple_answersTrue() {
+        let filter = Filters.Path.custom { string in
+            return string == "/Second/path/to/anywhere"
+        }
+        XCTAssertTrue(filter.apply("/Second/path/to/anywhere"))
+    }
+
+    func test_pathCustomComplexMatches_answersFalse() {
+        let filter = Filters.Path.custom { string in
+            let disallowedValues = ["/Second/path/to/anywhere"]
+            let allowedValues = ["/First/path/to/anywhere"]
+            return !disallowedValues.contains(string) && allowedValues.contains(string)
+        }
+        XCTAssertFalse(filter.apply("/Second/path/to/anywhere"))
+    }
+
+    func test_pathCustomComplexMatches_answersTrue() {
+        let filter = Filters.Path.custom { string in
+            let disallowedValues = ["/Second/path/to/anywhere"]
+            let allowedValues = ["/First/path/to/anywhere"]
+            return !disallowedValues.contains(string) && allowedValues.contains(string)
+        }
+        XCTAssertTrue(filter.apply("/First/path/to/anywhere"))
+    }
+
     //
     // Function filtering tests (identity)
     //
@@ -291,7 +316,7 @@ class FilterTests: XCTestCase {
         let filter = Filters.Function.startsWith("myFunc")
         let isCorrectTargetType: Bool
         switch filter.getTarget() {
-        case .Function:
+        case .Function(_):
             isCorrectTargetType = true
 
         default:
@@ -549,6 +574,31 @@ class FilterTests: XCTestCase {
         XCTAssertFalse(filter.apply("myfunc"))
     }
 
+    func test_functionCustomSimple_answersTrue() {
+        let filter = Filters.Function.custom { string in
+            return string == "myfunc"
+        }
+        XCTAssertTrue(filter.apply("myfunc"))
+    }
+
+    func test_functionCustomComplexMatches_answersTrue() {
+        let filter = Filters.Function.custom { string in
+            let disallowedValues = ["yourFunc", "yourOtherFunc"]
+            let allowedValues = ["myFunc"]
+            return !disallowedValues.contains(string) && allowedValues.contains(string)
+        }
+        XCTAssertTrue(filter.apply("myFunc"))
+    }
+
+    func test_functionCustomComplexMatches_answersFalse() {
+        let filter = Filters.Function.custom { string in
+            let disallowedValues = ["yourFunc", "yourOtherFunc"]
+            let allowedValues = ["myFunc"]
+            return !disallowedValues.contains(string) && allowedValues.contains(string)
+        }
+        XCTAssertFalse(filter.apply("yourFunc"))
+    }
+
     //
     // Message filtering tests (identity)
     //
@@ -556,7 +606,7 @@ class FilterTests: XCTestCase {
         let filter = Filters.Message.startsWith("Hello there, SwiftyBeaver!")
         let isCorrectTargetType: Bool
         switch filter.getTarget() {
-        case .Message:
+        case .Message(_):
             isCorrectTargetType = true
 
         default:
@@ -824,6 +874,31 @@ class FilterTests: XCTestCase {
         XCTAssertFalse(filter.apply("Hello there, SwiftyBeaver!"))
     }
 
+    func test_messageCustomSimple_answersTrue() {
+        let filter = Filters.Message.custom { string in
+            return string == "hello"
+        }
+        XCTAssertTrue(filter.apply("hello"))
+    }
+
+    func test_messageCustomComplexMatches_answersTrue() {
+        let filter = Filters.Message.custom { string in
+            let disallowedValues = ["goodbye", "see you later"]
+            let allowedValues = ["hello"]
+            return !disallowedValues.contains(string) && allowedValues.contains(string)
+        }
+        XCTAssertTrue(filter.apply("hello"))
+    }
+
+    func test_messageCustomComplexMatches_answersFalse() {
+        let filter = Filters.Function.custom { string in
+            let disallowedValues = ["goodbye", "see you later"]
+            let allowedValues = ["hello"]
+            return !disallowedValues.contains(string) && allowedValues.contains(string)
+        }
+        XCTAssertFalse(filter.apply("goodbye"))
+    }
+
     // Helper functions
     private func isCaseSensitive(_ targetType: Filter.TargetType) -> Bool {
         let comparisonType: Filter.ComparisonType?
@@ -859,9 +934,11 @@ class FilterTests: XCTestCase {
 
         case let .Equals(_, caseSensitive):
             isCaseSensitive = caseSensitive
+        case .Custom(_):
+            isCaseSensitive = false
         }
 
         return isCaseSensitive
     }
-}
 
+}

@@ -81,7 +81,7 @@ class DestinationSetTests: XCTestCase {
 
     static let allTests = [
         ("testChangeDestinationsMinLogLevels", testChangeDestinationsMinLogLevels),
-        ("testRemoveConsoleDestinations", testRemoveConsoleDestinations),
+        ("testRemoveConsoleDestinations", testRemoveConsoleDestinations)
+
     ]
 }
-
